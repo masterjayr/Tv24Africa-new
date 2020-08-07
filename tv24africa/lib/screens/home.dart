@@ -83,32 +83,40 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+        
+        margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
         padding: EdgeInsets.all(10.0),
         height: 140.0,
         decoration: BoxDecoration(
+          borderRadius: BorderRadiusDirectional.circular(20),
           color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.black12,
-              offset: Offset(0, 1),
+              offset: Offset(4, 1),
               blurRadius: 6.0,
             ),
           ],
         ),
         child: Row(
+          
           children: <Widget>[
-            Image(
-              width: 150.0,
-              image: NetworkImage(video.thumbnailUrl),
-            ),
+            Container(
+                width: 150.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40)
+                ),
+                child: Image(             
+                  image: NetworkImage(video.thumbnailUrl),
+                ),
+              ),
             SizedBox(width: 10.0),
             Expanded(
               child: Text(
                 video.title,
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 18.0,
+                  fontSize: 15.0,
                 ),
               ),
             ),
@@ -161,7 +169,7 @@ class _HomePageState extends State<HomePage> {
           : Center(
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(
-                  Theme.of(context).primaryColor, // Red
+                  Theme.of(context).secondaryHeaderColor, // Red
                 ), 
               ),
             ),

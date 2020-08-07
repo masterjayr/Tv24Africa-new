@@ -8,7 +8,7 @@ class LiveStream extends StatefulWidget {
 
 class _LiveStreamState extends State<LiveStream> {
 
-  String videoUrl = "https://www.youtube.com/watch?v=rVH3vmpoOVA";
+  String videoUrl = "https://youtu.be/cGSI2OTpnO4";
   YoutubePlayerController _liveVideoController;
 
   @override
@@ -42,9 +42,9 @@ class _LiveStreamState extends State<LiveStream> {
               SizedBox(
                 height: 30,
               ),
-              YoutubePlayer(
-                controller:_liveVideoController,
-                ),
+              // YoutubePlayer(
+              //   controller:_liveVideoController,
+              //   ),
 
 
             ]

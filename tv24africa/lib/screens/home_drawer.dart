@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tv24africa/screens/citizens_report.dart';
 import 'package:tv24africa/screens/listen_live.dart';
 import 'package:tv24africa/screens/podcast.dart';
@@ -7,26 +8,23 @@ import 'package:tv24africa/screens/settings.dart';
 import './about.dart';
 import 'clips.dart';
 
-
-
 class MainDrawer extends StatefulWidget {
   @override
   _MainDrawerState createState() => _MainDrawerState();
 }
 
-class _MainDrawerState extends State<MainDrawer> {  
+class _MainDrawerState extends State<MainDrawer> {
   // var categories =['Business', 'politics', 'entertainment', 'sports', 'Listen Live'];
   @override
   Widget build(BuildContext context) {
     return Container(
       // color: Color(0xFF262626),
-      decoration: BoxDecoration(color: Colors.black),
+      decoration: BoxDecoration(color: Colors.white),
       child: Container(
         color: Color(0xFF262626),
         child: Drawer(
           child: SingleChildScrollView(
-                  child: Column(
-                    
+            child: Column(
               children: <Widget>[
                 Container(
                   width: double.infinity,
@@ -46,134 +44,156 @@ class _MainDrawerState extends State<MainDrawer> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/tv.png'),
+                                image: AssetImage('assets/images/tv.png'),
                                 fit: BoxFit.fill,
                               ),
                             ),
                           ),
                         ),
-                        Text(
-                          'Tv24 Africa',
-                          style: TextStyle(
-                            fontSize: 33,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
+                        Text('Tv24 Africa',
+                            style: GoogleFonts.mcLaren(
+                              textStyle: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                              ),
+                            )),
                       ],
                     ),
                   ),
                 ),
                 Container(
-                  // color: Color(0xFF262626),
                   child: SingleChildScrollView(
-                              child: Container(
-                                // color:Colors.black45,
+                    child: Container(
                       child: ListTile(
                           leading: Icon(Icons.report),
-                          title: Text(
-                            'Citizens Report',
-                            style: TextStyle(fontSize: 16),
-                          ),
+                          title: Text('Submit Your Pitch  ',
+                              style: GoogleFonts.mcLaren(
+                                textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                ),
+                              )),
                           onTap: () {
                             Navigator.of(context).pop();
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => CitizensReport()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CitizensReport()));
                           }),
                     ),
                   ),
                 ),
                 ListTile(
                     leading: Icon(Icons.picture_in_picture),
-                    title: Text(
-                      'Programs',
-                      style: TextStyle(fontSize: 16),
-                    ),
+                    title: Text('Programs',
+                        style: GoogleFonts.mcLaren(
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
+                        )),
                     onTap: () {
                       Navigator.of(context).pop();
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Programs()));
-                    }
-                    ),
+                    }),
                 ListTile(
                     leading: Icon(Icons.schedule),
-                    title: Text(
-                      'Schedule',
-                      style: TextStyle(fontSize: 16),
-                    ),
+                    title: Text('Schedule',
+                        style: GoogleFonts.mcLaren(
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
+                        )),
                     onTap: () {
                       Navigator.of(context).pop();
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) =>SettingsPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SettingsPage()));
                     }),
                 ListTile(
                   leading: Icon(Icons.info),
-                  title: Text(
-                    'About',
-                    style: TextStyle(fontSize: 16,
-                    color: Colors.black),
-                  ),
+                  title: Text('About',
+                      style: GoogleFonts.mcLaren(
+                        textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                        ),
+                      )),
                   onTap: () {
                     Navigator.of(context).pop();
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => About()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => About()));
                   },
                 ),
                 ListTile(
                   leading: Icon(Icons.switch_video),
-                  title: Text(
-                    'Videos',
-                    style: TextStyle(fontSize: 16),
-                  ),
+                  title: Text('Videos',
+                      style: GoogleFonts.mcLaren(
+                        textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                        ),
+                      )),
                   onTap: () {
                     Navigator.of(context).pop();
                     Navigator.push(context,
-                         MaterialPageRoute(builder: (context) => ClipVid()));
+                        MaterialPageRoute(builder: (context) => ClipVid()));
                   },
                 ),
-              
-                                  ListTile(
-                                      leading: Icon(Icons.settings),
-                                      title: Text(
-                                        'Settings',
-                                        style: TextStyle(fontSize: 16),
-                                      ),
-                                      onTap: () {
-                                        Navigator.of(context).pop();
-                                        Navigator.push(context,
-                                            MaterialPageRoute(builder: (context) => SettingsPage()));
-                                      }),
-
-                                      ListTile(
-                                      leading: Icon(Icons.audiotrack),
-                                      title: Text(
-                                        'Listen Live',
-                                        style: TextStyle(fontSize: 16),
-                                      ),
-                                      onTap: () {
-                                        Navigator.of(context).pop();
-                                        Navigator.push(context,
-                                            MaterialPageRoute(builder: (context) => ListenLive()));
-                                      }),
-                                      ListTile(
-                                      leading: Icon(Icons.record_voice_over),
-                                      title: Text(
-                                        'Podcast',
-                                        style: TextStyle(fontSize: 16),
-                                      ),
-                                      onTap: () {
-                                        Navigator.of(context).pop();
-                                        Navigator.push(context,
-                                            MaterialPageRoute(builder: (context) => PodCast()));
-                                      })
-                                ],
-                              ),
-                            ),
+                ListTile(
+                    leading: Icon(Icons.settings),
+                    title: Text('Settings',
+                        style: GoogleFonts.mcLaren(
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
                           ),
+                        )),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SettingsPage()));
+                    }),
+                ListTile(
+                    leading: Icon(Icons.audiotrack),
+                    title: Text('Listen Live',
+                        style: GoogleFonts.mcLaren(
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
+                        )),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ListenLive()));
+                    }),
+                ListTile(
+                    leading: Icon(Icons.record_voice_over),
+                    title: Text('Podcast',
+                        style: GoogleFonts.mcLaren(
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
+                        )),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => PodCast()));
+                    })
+              ],
+            ),
+          ),
+        ),
       ),
     );
-                    }
-                  }
-                  
-                
+  }
+}

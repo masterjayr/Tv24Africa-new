@@ -3,7 +3,7 @@ import 'package:tv24africa/screens/home.dart';
 import 'package:tv24africa/screens/live_stream.dart';
 import 'package:tv24africa/screens/news.dart';
 import './screens/home_drawer.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 
 void main()=>runApp(new MyApp());
@@ -35,26 +35,31 @@ class _MyAppState extends State<MyApp> {
       title: 'Tv24 Africa',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xFF262626),
+        // textTheme:GoogleFonts.pacificoTextTheme(),
+        primaryColor: Colors.white,
         secondaryHeaderColor: Color(0xFF262626),
       ),
       home: Scaffold(
-        backgroundColor: Color(0xFF262626),
+        backgroundColor: Colors.white,
         appBar:AppBar(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Tv24',
-              style: TextStyle(
-                color: Color(0xFFff0000),
+              style:GoogleFonts.mcLaren(
+                textStyle: TextStyle(
+                color: Colors.black,
                 fontSize: 30,
                 ),
+              ) 
               ),
               Text('Africa', 
-              style:TextStyle(
-                color: Color(0xFFff0000),
-                fontSize: 44,
-              ),
+              style:GoogleFonts.mcLaren(
+                textStyle: TextStyle(
+                color: Colors.black,
+                fontSize: 40,
+                ),
+              )
               ),
             ],
           ),
@@ -66,9 +71,9 @@ class _MyAppState extends State<MyApp> {
         // backgroundColor: Colors.black12,
         bottomNavigationBar:BottomNavigationBar(
           // type: BottomNavigationBarType.shifting,
-          backgroundColor: Color(0xFF262626),
+          backgroundColor: Colors.white,
           selectedItemColor:Color(0xFFff0000),
-          unselectedItemColor:Color(0xFfffffff),
+          unselectedItemColor:Colors.grey,
           currentIndex: _currentIndex,
           onTap: (value){
             _currentIndex = value;

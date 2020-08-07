@@ -12,10 +12,10 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
        backgroundColor: Colors.black,
       appBar: AppBar(title: Text('Settings Screen')),
       body: SettingsList(
+        
         sections: [
           SettingsSection(
             title: 'Preferences',
@@ -31,7 +31,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
               SettingsTile(
                   title: 'Location',
-                  subtitle: 'Earth',
+                  subtitle: 'Nigeria',
                   leading: Icon(Icons.gps_not_fixed)),
             ],
           ),
