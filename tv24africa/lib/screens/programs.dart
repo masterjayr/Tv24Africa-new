@@ -16,18 +16,11 @@ class _ProgramsState extends State<Programs> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              // Text(
-              //   'Tv24',
-              //   style: TextStyle(
-              //     color: Color(0xFFff0000),
-              //     fontSize: 30,
-              //   ),
-              // ),
               Text(
                 'Programs',
                 style: TextStyle(
-                  color: Color(0xFFff0000),
-                  fontSize: 30,
+                  color: Colors.black,
+                  fontSize: 20,
                   
                 ),
               ),
@@ -41,9 +34,14 @@ class _ProgramsState extends State<Programs> {
         body: ListView.builder(
             itemCount: programsmodel.length,
             itemBuilder: (context, index) {
-              return programs(
-                programsmodel[index].imagesrc,
-               programsmodel[index].info,
+              return InkWell(
+                onTap: (){
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>));
+                },
+                 child: programs(
+                  programsmodel[index].imagesrc,
+                 programsmodel[index].info,
+                ),
               );
             }),
             );
@@ -57,7 +55,7 @@ class _ProgramsState extends State<Programs> {
           color: Colors.white,
           elevation: 15.0,
           borderRadius: BorderRadius.circular(30),
-          shadowColor: Colors.red,
+          shadowColor: Colors.black,
           child: Column(
             children: <Widget>[
               Container(

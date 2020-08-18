@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:tv24africa/screens/home_drawer.dart';
@@ -56,8 +55,6 @@ class _CitizensReportState extends State<CitizensReport> {
         });
   }
 
-  
-
   final _formKey = GlobalKey<FormState>();
   var _currentItemSelected = 'Trendz';
   var _categories = [
@@ -75,7 +72,7 @@ class _CitizensReportState extends State<CitizensReport> {
   ];
   String name, email, postTitle, excerpt, tags, postDescription;
 
-Widget _decideImageView() {
+  Widget _decideImageView() {
     if (imageFile == null) {
       return Text("no selected image");
     } else {
@@ -86,19 +83,19 @@ Widget _decideImageView() {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF262626),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               'Submit Your Pitch',
-              style: GoogleFonts.mcLaren(
-                textStyle: TextStyle(
-                color: Colors.red,
-                fontSize: 30,
-                ),// fontFamily: ,
-              ),
+              style:
+                 TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                ), // fontFamily: ,
+              
             ),
           ],
         ),
@@ -106,6 +103,7 @@ Widget _decideImageView() {
         elevation: 0.0,
       ),
       drawer: MainDrawer(),
+      
       body: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -212,11 +210,13 @@ Widget _decideImageView() {
                       name = val;
                     },
                   ),
+                  SizedBox(height: 30),
                   DropdownButton<String>(
+                    dropdownColor: Colors.grey,
                     items: _categories.map((String dropDownStringItem) {
                       return DropdownMenuItem<String>(
                         value: dropDownStringItem,
-                        child: new Text(dropDownStringItem),
+                        child: new Text(dropDownStringItem,),
                       );
                     }).toList(),
                     onChanged: (String newValueSelected) {
@@ -226,52 +226,71 @@ Widget _decideImageView() {
                     },
                     value: _currentItemSelected,
                   ),
-                  Container(
+                  SizedBox(height: 5),
+                  Container( 
                     child: Column(
                       children: <Widget>[
                         _decideImageView(),
-                        RaisedButton(
-                          color: Colors.red,
-                          onPressed: () {
-                             _showChoiceDialog(context);
-                          },
-                          child: Text("select a photo", style: TextStyle(color: Colors.black
-                          ),
+                        ButtonTheme(
+                          height: 50,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            color: Colors.black,
+                            onPressed: () {
+                              _showChoiceDialog(context);
+                            },
+                            child: Text(
+                              "select a photo",
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ),
-                         SizedBox(height: 20,),
-                         Row(
-                           children: <Widget>[
-                             Container(
-                               child: FlatButton.icon(
-                                 color: Colors.red,
-                                 label: Text("Send"),
-                                 icon: Icon(Icons.send),
-                                 onPressed: (){
-                                   
-                                 }, 
-                               ),
-                             ),
-                             SizedBox(height: 10),
-                             Container(
-                               child: FlatButton.icon(
-                                 color: Colors.red[300],
-                                 label: Text("save as draft"),
-                                 icon: Icon(Icons.drafts),
-                                 onPressed: (){
-                                   
-                                 }, 
-                               ),
-                             )
-                           ],
-                         ),
-                       
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Container(
+                              child: ButtonTheme(
+                                height: 60,
+                                child: FlatButton.icon(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  color: Colors.black,
+                                  label: Center(
+                                    child: Text("Send your post", style: TextStyle(color:Colors.white,))),
+                                  icon: Icon(Icons.send, color: Colors.white,),
+                                  onPressed: () {},
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            ClipRRect(
+                              child: Container(
+                                child: ButtonTheme(
+                                  height: 60,
+                                  child: FlatButton.icon(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    color: Colors.black,
+                                    label: Center(
+                                      child: Text("save as draft", style: TextStyle(color:Colors.white,), textAlign: TextAlign.center,)),
+                                    icon: Icon(Icons.drafts, color: Colors.white,),
+                                    onPressed: () {},
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ],
-
                     ),
-                    
                   ),
-                  
                 ],
               ),
             ),

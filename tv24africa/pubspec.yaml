@@ -33,6 +33,13 @@ dependencies:
   image_picker:
   google_fonts: ^1.1.0
   chewie:
+  cached_network_image: ^2.2.0+1
+  html:
+  flutter_wordpress: 0.1.4
+  flutter_html: 0.11.0
+  connectivity: ^0.4.9
+  # url_launcher: 5.1.6
+  url_launcher: ^5.5.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -81,6 +88,7 @@ flutter:
     - assets/images/4.jpg
     - assets/images/6.png
     - assets/images/tip.jpg
+    - assets/images/load.gif
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

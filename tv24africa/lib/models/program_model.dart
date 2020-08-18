@@ -5,7 +5,7 @@ class ProgramInfo {
   ProgramInfo({this.imagesrc, this.info});
 }
 
-List<ProgramInfo> programsmodel = [
+ List<ProgramInfo> programsmodel = [
   ProgramInfo(
     imagesrc: 'assets/images/this is  africa.jpg',
     info: """

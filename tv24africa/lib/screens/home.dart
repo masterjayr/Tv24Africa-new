@@ -98,8 +98,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        child: Row(
-          
+        child: Row( 
           children: <Widget>[
             Container(
                 width: 150.0,
@@ -141,9 +140,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
        backgroundColor: Colors.black12,
-      // appBar: AppBar(
-      //   title: Text('YouTube Channel'),
-      // ),
       body: _channel != null
           ? NotificationListener<ScrollNotification>(
               onNotification: (ScrollNotification scrollDetails) {

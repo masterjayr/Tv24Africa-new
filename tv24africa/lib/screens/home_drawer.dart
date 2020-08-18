@@ -4,6 +4,7 @@ import 'package:tv24africa/screens/citizens_report.dart';
 import 'package:tv24africa/screens/listen_live.dart';
 import 'package:tv24africa/screens/podcast.dart';
 import 'package:tv24africa/screens/programs.dart';
+import 'package:tv24africa/screens/schedule.dart';
 import 'package:tv24africa/screens/settings.dart';
 import './about.dart';
 import 'clips.dart';
@@ -65,11 +66,11 @@ class _MainDrawerState extends State<MainDrawer> {
                   child: SingleChildScrollView(
                     child: Container(
                       child: ListTile(
-                          leading: Icon(Icons.report),
+                          leading: Icon(Icons.report, color: Colors.white),
                           title: Text('Submit Your Pitch  ',
                               style: GoogleFonts.mcLaren(
                                 textStyle: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 15,
                                 ),
                               )),
@@ -84,11 +85,11 @@ class _MainDrawerState extends State<MainDrawer> {
                   ),
                 ),
                 ListTile(
-                    leading: Icon(Icons.picture_in_picture),
+                    leading: Icon(Icons.picture_in_picture, color: Colors.white,),
                     title: Text('Programs',
                         style: GoogleFonts.mcLaren(
                           textStyle: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 15,
                           ),
                         )),
@@ -98,11 +99,11 @@ class _MainDrawerState extends State<MainDrawer> {
                           MaterialPageRoute(builder: (context) => Programs()));
                     }),
                 ListTile(
-                    leading: Icon(Icons.schedule),
+                    leading: Icon(Icons.schedule, color: Colors.white,),
                     title: Text('Schedule',
                         style: GoogleFonts.mcLaren(
                           textStyle: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 15,
                           ),
                         )),
@@ -111,14 +112,14 @@ class _MainDrawerState extends State<MainDrawer> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SettingsPage()));
+                              builder: (context) => Schedule()));
                     }),
                 ListTile(
-                  leading: Icon(Icons.info),
+                  leading: Icon(Icons.info, color: Colors.white),
                   title: Text('About',
                       style: GoogleFonts.mcLaren(
                         textStyle: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 15,
                         ),
                       )),
@@ -129,11 +130,11 @@ class _MainDrawerState extends State<MainDrawer> {
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.switch_video),
+                  leading: Icon(Icons.switch_video, color: Colors.white),
                   title: Text('Videos',
                       style: GoogleFonts.mcLaren(
                         textStyle: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 15,
                         ),
                       )),
@@ -144,11 +145,11 @@ class _MainDrawerState extends State<MainDrawer> {
                   },
                 ),
                 ListTile(
-                    leading: Icon(Icons.settings),
+                    leading: Icon(Icons.settings, color: Colors.white),
                     title: Text('Settings',
                         style: GoogleFonts.mcLaren(
                           textStyle: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 15,
                           ),
                         )),
@@ -160,11 +161,11 @@ class _MainDrawerState extends State<MainDrawer> {
                               builder: (context) => SettingsPage()));
                     }),
                 ListTile(
-                    leading: Icon(Icons.audiotrack),
+                    leading: Icon(Icons.audiotrack, color:Colors.white),
                     title: Text('Listen Live',
                         style: GoogleFonts.mcLaren(
                           textStyle: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 15,
                           ),
                         )),
@@ -176,11 +177,11 @@ class _MainDrawerState extends State<MainDrawer> {
                               builder: (context) => ListenLive()));
                     }),
                 ListTile(
-                    leading: Icon(Icons.record_voice_over),
+                    leading: Icon(Icons.record_voice_over, color: Colors.white),
                     title: Text('Podcast',
                         style: GoogleFonts.mcLaren(
                           textStyle: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 15,
                           ),
                         )),

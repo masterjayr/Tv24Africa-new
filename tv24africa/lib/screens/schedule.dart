@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:tv24africa/screens/home_drawer.dart';
 
-import 'home_drawer.dart';
-class ClipVid extends StatefulWidget {
+class Schedule extends StatefulWidget {
   @override
-  _ClipVidState createState() => _ClipVidState();
+  _ScheduleState createState() => _ScheduleState();
 }
 
-class _ClipVidState extends State<ClipVid> {
+class _ScheduleState extends State<Schedule> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-        appBar:AppBar(
+        appBar: AppBar(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Videos',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
+              Text(
+                'schedules',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  
                 ),
               ),
             ],
@@ -27,9 +29,7 @@ class _ClipVidState extends State<ClipVid> {
           elevation: 0.0,
         ),
         drawer: MainDrawer(),
-      body: Container(
-        
-      ),
+      
     );
   }
 }

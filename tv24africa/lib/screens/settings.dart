@@ -13,7 +13,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
        backgroundColor: Colors.black,
-      appBar: AppBar(title: Text('Settings Screen')),
+      appBar: AppBar(title: Text('Settings')),
       body: SettingsList(
         
         sections: [
