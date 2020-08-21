@@ -35,7 +35,7 @@ class _BusinessCatState extends State<BusinessCat> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => BusinessDetail()));
+                                  builder: (context) => BusinessDetail(wppost)));
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(
@@ -47,7 +47,8 @@ class _BusinessCatState extends State<BusinessCat> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 // Image.network(imageUrl),
-                                FadeInImage.assetNetwork(
+                               imageUrl==null? Container(
+                               ):FadeInImage.assetNetwork(
                                   placeholder: 'assets/images/load.gif',
                                   image: imageUrl,
                                 ),

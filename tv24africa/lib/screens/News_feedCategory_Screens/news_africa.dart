@@ -35,7 +35,7 @@ class _AfricaState extends State<Africa> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => NewsAfrica()));
+                                  builder: (context) => NewsAfrica(wppost)));
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(

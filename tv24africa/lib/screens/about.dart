@@ -12,7 +12,9 @@ class _AboutState extends State<About> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('About')
+        title: Text('About'),
+        elevation: 0.0,
+        centerTitle: true,
 
       ),
       drawer: MainDrawer(),
@@ -21,9 +23,12 @@ class _AboutState extends State<About> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              child: Text('\n\nTv24Africa  is the flagship company owned by News Media Africa set up to tell the African stories in ways never told and to give the African people the chance for their views, voices, \nideas and perspectives to be heard globally.\nContact us: News@tv24africa.com\n\n\n\n\n Version 1.10\n\n\n@2020',
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('\nTv24Africa  is the flagship company owned by News Media Africa set up to tell the African stories in ways never told and to give the African people the chance for their views, voices, \nideas and perspectives to be heard globally.\nContact us: News@tv24africa.com\n\n Version 1.10\n@2020',
              
-              style: TextStyle(fontSize:17, color: Colors.black), textAlign: TextAlign.center,  
+                style: TextStyle(fontSize:17, color: Colors.black), textAlign: TextAlign.center,  
+                ),
               ),   
             ),
           )

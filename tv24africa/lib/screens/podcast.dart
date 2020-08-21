@@ -11,21 +11,21 @@ class _PodCastState extends State<PodCast> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF262626),
+      backgroundColor: Colors.white,
         appBar:AppBar(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Tv24',
+              Text('Pod',
               style: TextStyle(
-                color: Color(0xFFff0000),
-                fontSize: 30,
+                color: Colors.black,
+                fontSize: 20,
                 ),
               ),
-              Text('Africa', 
+              Text('Cast', 
               style:TextStyle(
-                color: Color(0xFFff0000),
-                fontSize: 44,
+                color: Colors.black,
+                fontSize: 20,
               ),
               ),
             ],
@@ -34,6 +34,13 @@ class _PodCastState extends State<PodCast> {
           elevation: 0.0,
         ),
         drawer: MainDrawer(),
+
+        body: Container(
+          child: Image(
+            image: AssetImage("assets/images/podcast.gif"),
+          )
+          
+        ),
       
     );
   }

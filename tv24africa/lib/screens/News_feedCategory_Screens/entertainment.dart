@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:html/parser.dart';
-import 'package:tv24africa/screens/categories_detail_page/entertain.dart';
+import 'package:tv24africa/screens/categories_detail_page/entertain_detail_page.dart';
 import 'package:tv24africa/services/categories_api%20calls/entertainment_api_call.dart';
 
 class Entertain extends StatefulWidget {
@@ -35,7 +35,7 @@ class _EntertainState extends State<Entertain> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => EntertainDetail()));
+                                  builder: (context) => EntertainDetail(wppost)));
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(

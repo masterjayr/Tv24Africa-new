@@ -237,7 +237,7 @@ class _CitizensReportState extends State<CitizensReport> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            color: Colors.black,
+                            color: Colors.grey,
                             onPressed: () {
                               _showChoiceDialog(context);
                             },
@@ -260,7 +260,7 @@ class _CitizensReportState extends State<CitizensReport> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10),
                                   ),
-                                  color: Colors.black,
+                                  color: Colors.grey,
                                   label: Center(
                                     child: Text("Send your post", style: TextStyle(color:Colors.white,))),
                                   icon: Icon(Icons.send, color: Colors.white,),
@@ -277,7 +277,7 @@ class _CitizensReportState extends State<CitizensReport> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10),
                                     ),
-                                    color: Colors.black,
+                                    color: Colors.grey,
                                     label: Center(
                                       child: Text("save as draft", style: TextStyle(color:Colors.white,), textAlign: TextAlign.center,)),
                                     icon: Icon(Icons.drafts, color: Colors.white,),

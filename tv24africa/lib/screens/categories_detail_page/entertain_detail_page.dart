@@ -3,10 +3,10 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // ignore: must_be_immutable
-class BusinessDetail extends StatelessWidget {
-  Map<String, dynamic> wppost;
+class EntertainDetail extends StatelessWidget {
+   Map<String, dynamic> wppost;
 
-  BusinessDetail(this.wppost);
+  EntertainDetail(this.wppost);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class BusinessDetail extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
          backgroundColor: Colors.white,
-      body: Container(
+           body: Container(
         child: Padding(
           padding: EdgeInsets.all(10.0),
           child: ListView(
@@ -54,7 +54,6 @@ class BusinessDetail extends StatelessWidget {
           ),
         )
       ),
-
       
     );
   }

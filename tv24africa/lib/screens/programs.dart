@@ -59,12 +59,20 @@ class _ProgramsState extends State<Programs> {
           child: Column(
             children: <Widget>[
               Container(
-                child: Image(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50)
+                ),
+                width: 600,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                  child: Image(
                   height: 100,
+                  width:200,
                   fit: BoxFit.fill,
                   image: AssetImage(imageUrl),
                 ),
               ),
+                ),
               Container(
               
                 child: Padding(

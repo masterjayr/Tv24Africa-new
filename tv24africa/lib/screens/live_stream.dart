@@ -7,24 +7,17 @@ class LiveStream extends StatefulWidget {
 }
 
 class _LiveStreamState extends State<LiveStream> {
-
-  String videoUrl = "https://youtu.be/cGSI2OTpnO4";
+  // String videoUrl = "https://youtu.be/cGSI2OTpnO4";
+  String videoUrl = "https://youtu.be/fbSWMB6-8TA";
   YoutubePlayerController _liveVideoController;
 
   @override
-  void initState() { 
-
-      _liveVideoController = YoutubePlayerController(
+  void initState() {
+    _liveVideoController = YoutubePlayerController(
         initialVideoId: YoutubePlayer.convertUrlToId(videoUrl),
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: true,
-          isLive: true
-        )
-      );
+        flags: YoutubePlayerFlags(autoPlay: false, mute: true, isLive: true));
 
     super.initState();
-    
   }
 
   @override
@@ -32,27 +25,18 @@ class _LiveStreamState extends State<LiveStream> {
     return Scaffold(
       body: Container(
         child: SingleChildScrollView(
-          child:Column(
-            children:<Widget>[
-              YoutubePlayer(
-                controller: _liveVideoController,
-
-
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              // YoutubePlayer(
-              //   controller:_liveVideoController,
-              //   ),
-
-
-            ]
-          )
-        ),
+            child: Column(children: <Widget>[
+          YoutubePlayer(
+            controller: _liveVideoController,
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          // YoutubePlayer(
+          //   controller:_liveVideoController,
+          //   ),
+        ])),
       ),
-      
-      
     );
   }
 }

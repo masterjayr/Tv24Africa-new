@@ -3,7 +3,7 @@ import 'dart:convert';
 
 Future<List> fetchWpBusinessPost() async {
   final response = await http.get(
-      'https://news.tv24africa.com/wp-json/wp/v2/posts?filter[cat]=77',
+      'https://news.tv24africa.com/wp-json/wp/v2/posts?categories=77',
       headers: {"Accept": "application/json"});
 
   var convertBusinessDatatoJson = jsonDecode(response.body);

@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:html/parser.dart';
-import 'package:tv24africa/screens/categories_detail_page/politics_details_screen.dart';
-import 'package:tv24africa/services/categories_api%20calls/politics_api_call.dart';
+import 'package:tv24africa/screens/categories_detail_page/in_pics_detail.dart';
+import 'package:tv24africa/services/categories_api%20calls/in_pics_api_call.dart';
 
-class Politics extends StatefulWidget {
+class Sport extends StatefulWidget {
   @override
-  _PoliticsState createState() => _PoliticsState();
+  _SportState createState() => _SportState();
 }
 
-class _PoliticsState extends State<Politics> {
+class _SportState extends State<Sport> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Politics"),
+        title: Text("In-Pictures"),
         elevation: 0.0,
         centerTitle: true,
       ),
       body: Container(
-        child: FutureBuilder(
-            future: fetchWpPoliticsPost(),
+         child: FutureBuilder(
+            future: fetchWpInPics(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 return ListView.builder(
@@ -35,7 +35,7 @@ class _PoliticsState extends State<Politics> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => PoliticsDetail(wppost)));
+                                  builder: (context) => InPicDetail(wppost)));
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(

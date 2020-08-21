@@ -141,7 +141,7 @@ class _MainDrawerState extends State<MainDrawer> {
                   onTap: () {
                     Navigator.of(context).pop();
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ClipVid()));
+                        MaterialPageRoute(builder: (context) => ClipVideosMan()));
                   },
                 ),
                 ListTile(

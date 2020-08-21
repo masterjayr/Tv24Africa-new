@@ -40,6 +40,8 @@ dependencies:
   connectivity: ^0.4.9
   # url_launcher: 5.1.6
   url_launcher: ^5.5.0
+  provider: ^2.0.1
+  video_player:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -89,6 +91,7 @@ flutter:
     - assets/images/6.png
     - assets/images/tip.jpg
     - assets/images/load.gif
+    - assets/images/podcast.gif 
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

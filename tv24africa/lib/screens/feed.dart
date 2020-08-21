@@ -6,8 +6,8 @@ import '../services/wp_post_api.dart';
 import 'package:html/parser.dart';
 
 import 'News_feedCategory_Screens/politics.dart';
-import 'News_feedCategory_Screens/sports.dart';
-import 'News_feedCategory_Screens/tip.dart';
+import 'News_feedCategory_Screens/in_picture.dart';
+// import 'News_feedCategory_Screens/tip.dart';
 import 'feed_details.dart';
 
 class News extends StatefulWidget {
@@ -132,7 +132,7 @@ class _NewsState extends State<News> {
                       leading: CircleAvatar(
                           backgroundImage: AssetImage("assets/images/4.jpg")),
                       title:
-                          Text("Sports", style: TextStyle(color: Colors.white)),
+                          Text("In-Pictures", style: TextStyle(color: Colors.white)),
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => Sport()));
@@ -172,15 +172,15 @@ class _NewsState extends State<News> {
                             MaterialPageRoute(builder: (context) => Africa()));
                       },
                     ),
-                    ListTile(
-                      leading: CircleAvatar(
-                          backgroundImage: AssetImage("assets/images/tip.jpg")),
-                      title: Text("Tip", style: TextStyle(color: Colors.white)),
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Tip()));
-                      },
-                    ),
+                    // ListTile(
+                    //   leading: CircleAvatar(
+                    //       backgroundImage: AssetImage("assets/images/tip.jpg")),
+                    //   title: Text("Tip", style: TextStyle(color: Colors.white)),
+                    //   onTap: () {
+                    //     Navigator.push(context,
+                    //         MaterialPageRoute(builder: (context) => Tip()));
+                    //   },
+                    // ),
                   ],
                 ),
               ),

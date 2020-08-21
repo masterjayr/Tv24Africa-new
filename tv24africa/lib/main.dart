@@ -4,7 +4,6 @@ import 'package:tv24africa/screens/home.dart';
 import 'package:tv24africa/screens/live_stream.dart';
 import './screens/home_drawer.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 void main() => runApp(new MyApp());
 
 class MyApp extends StatefulWidget {
@@ -13,7 +12,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   int _currentIndex = 0;
   Widget callPage(int currentIndex) {
     switch (currentIndex) {
@@ -59,7 +57,6 @@ class _MyAppState extends State<MyApp> {
                       fontSize: 20,
                     ),
                   )),
-        
             ],
           ),
           centerTitle: true,
@@ -67,7 +64,7 @@ class _MyAppState extends State<MyApp> {
         ),
         drawer: MainDrawer(),
         body: callPage(
-          _currentIndex,
+          _currentIndex, 
         ),
         // backgroundColor: Colors.black12,
         bottomNavigationBar: BottomNavigationBar(
@@ -100,7 +97,6 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
 
 // AIzaSyA4Zy6yDJjS1kX0DaVOFlg3DHouNE56Sp4
 
