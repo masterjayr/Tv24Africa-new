@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tv24africa/models/program_model.dart';
+// import 'package:tv24africa/screens/home.dart';
 import 'package:tv24africa/screens/home_drawer.dart';
 
 class Programs extends StatefulWidget {
@@ -11,40 +12,54 @@ class _ProgramsState extends State<Programs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFF262626),
-        appBar: AppBar(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'Programs',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  
-                ),
+      backgroundColor: Color(0xFF262626),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Programs',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
               ),
-            ],
-          ),
-          centerTitle: true,
-          elevation: 0.0,
+            ),
+          ],
         ),
-        drawer: MainDrawer(),
-
-        body: ListView.builder(
-            itemCount: programsmodel.length,
-            itemBuilder: (context, index) {
-              return InkWell(
-                onTap: (){
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>));
-                },
-                 child: programs(
-                  programsmodel[index].imagesrc,
-                 programsmodel[index].info,
-                ),
-              );
-            }),
+        // actions: <Widget>[
+        //   Padding(
+        //     padding: const EdgeInsets.only(right: 10.0),
+        //     child: IconButton(
+        //       icon: Icon(
+        //         Icons.home,
+        //         color: Colors.black,
+        //       ),
+        //       onPressed: () {
+        //         Navigator.of(context).pop();
+        //         Navigator.push(context,
+        //             MaterialPageRoute(builder: (context) => HomePage()));
+        //       },
+        //     ),
+        //   )
+        // ],
+        centerTitle: true,
+        elevation: 0.0,
+      ),
+      drawer: MainDrawer(),
+      body: ListView.builder(
+          itemCount: programsmodel.length,
+          itemBuilder: (context, index) {
+            return InkWell(
+              onTap: () {
+                // Navigator.push(context, MaterialPageRoute(builder: (context)=>));
+              },
+              child: programs(
+                programsmodel[index].imagesrc,
+                programsmodel[index].info,
+              ),
             );
+          }),
+    );
   }
 
   Widget programs(String imageUrl, String containerText) {
@@ -59,27 +74,27 @@ class _ProgramsState extends State<Programs> {
           child: Column(
             children: <Widget>[
               Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50)
-                ),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(50)),
                 width: 600,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
                   child: Image(
-                  height: 100,
-                  width:200,
-                  fit: BoxFit.fill,
-                  image: AssetImage(imageUrl),
+                    height: 100,
+                    width: 200,
+                    fit: BoxFit.fill,
+                    image: AssetImage(imageUrl),
+                  ),
                 ),
               ),
-                ),
               Container(
-              
                 child: Padding(
                   padding: const EdgeInsets.all(26.0),
                   child: Text(
                     containerText,
-                    style: TextStyle(fontSize: 16,),
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               ),

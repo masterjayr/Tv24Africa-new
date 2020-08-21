@@ -28,7 +28,8 @@ class BusinessDetail extends StatelessWidget {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Image.network(wppost['featured_image_src']),
+                child: wppost['featured_image_src']==null? Container(
+                               ):Image.network(wppost['featured_image_src']),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),

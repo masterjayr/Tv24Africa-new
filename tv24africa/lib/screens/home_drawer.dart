@@ -4,7 +4,7 @@ import 'package:tv24africa/screens/citizens_report.dart';
 import 'package:tv24africa/screens/listen_live.dart';
 import 'package:tv24africa/screens/podcast.dart';
 import 'package:tv24africa/screens/programs.dart';
-import 'package:tv24africa/screens/schedule.dart';
+// import 'package:tv24africa/screens/schedule.dart';
 import 'package:tv24africa/screens/settings.dart';
 import './about.dart';
 import 'clips.dart';
@@ -98,22 +98,22 @@ class _MainDrawerState extends State<MainDrawer> {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Programs()));
                     }),
-                ListTile(
-                    leading: Icon(Icons.schedule, color: Colors.white,),
-                    title: Text('Schedule',
-                        style: GoogleFonts.mcLaren(
-                          textStyle: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                          ),
-                        )),
-                    onTap: () {
-                      Navigator.of(context).pop();
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Schedule()));
-                    }),
+                // ListTile(
+                //     leading: Icon(Icons.schedule, color: Colors.white,),
+                //     title: Text('Schedule',
+                //         style: GoogleFonts.mcLaren(
+                //           textStyle: TextStyle(
+                //             color: Colors.white,
+                //             fontSize: 15,
+                //           ),
+                //         )),
+                //     onTap: () {
+                //       Navigator.of(context).pop();
+                //       Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //               builder: (context) => Schedule()));
+                //     }),
                 ListTile(
                   leading: Icon(Icons.info, color: Colors.white),
                   title: Text('About',

@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:tv24africa/screens/home_drawer.dart';
+import 'package:tv24africa/screens/submit_success_screen.dart';
 
 class CitizensReport extends StatefulWidget {
   @override
@@ -90,12 +91,10 @@ class _CitizensReportState extends State<CitizensReport> {
           children: <Widget>[
             Text(
               'Submit Your Pitch',
-              style:
-                 TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                ), // fontFamily: ,
-              
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+              ), // fontFamily: ,
             ),
           ],
         ),
@@ -103,7 +102,6 @@ class _CitizensReportState extends State<CitizensReport> {
         elevation: 0.0,
       ),
       drawer: MainDrawer(),
-      
       body: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -216,7 +214,9 @@ class _CitizensReportState extends State<CitizensReport> {
                     items: _categories.map((String dropDownStringItem) {
                       return DropdownMenuItem<String>(
                         value: dropDownStringItem,
-                        child: new Text(dropDownStringItem,),
+                        child: new Text(
+                          dropDownStringItem,
+                        ),
                       );
                     }).toList(),
                     onChanged: (String newValueSelected) {
@@ -227,7 +227,7 @@ class _CitizensReportState extends State<CitizensReport> {
                     value: _currentItemSelected,
                   ),
                   SizedBox(height: 5),
-                  Container( 
+                  Container(
                     child: Column(
                       children: <Widget>[
                         _decideImageView(),
@@ -262,9 +262,21 @@ class _CitizensReportState extends State<CitizensReport> {
                                   ),
                                   color: Colors.grey,
                                   label: Center(
-                                    child: Text("Send your post", style: TextStyle(color:Colors.white,))),
-                                  icon: Icon(Icons.send, color: Colors.white,),
-                                  onPressed: () {},
+                                      child: Text("Send your post",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                          ))),
+                                  icon: Icon(
+                                    Icons.send,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => SuccesLog()));
+                                  },
                                 ),
                               ),
                             ),
@@ -279,8 +291,17 @@ class _CitizensReportState extends State<CitizensReport> {
                                     ),
                                     color: Colors.grey,
                                     label: Center(
-                                      child: Text("save as draft", style: TextStyle(color:Colors.white,), textAlign: TextAlign.center,)),
-                                    icon: Icon(Icons.drafts, color: Colors.white,),
+                                        child: Text(
+                                      "save as draft",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    )),
+                                    icon: Icon(
+                                      Icons.drafts,
+                                      color: Colors.white,
+                                    ),
                                     onPressed: () {},
                                   ),
                                 ),
