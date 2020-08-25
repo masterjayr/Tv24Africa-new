@@ -1,34 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:tv24africa/models/program_model.dart';
-import 'package:tv24africa/screens/home_drawer.dart';
 
-class Programs extends StatefulWidget {
+import 'home_drawer.dart';
+
+class More extends StatefulWidget {
   @override
-  _ProgramsState createState() => _ProgramsState();
+  _MoreState createState() => _MoreState();
 }
 
-class _ProgramsState extends State<Programs> {
+class _MoreState extends State<More> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       backgroundColor: Color(0xFF262626),
-      // appBar: AppBar(
-      //   // title: Row(
-      //   //   mainAxisAlignment: MainAxisAlignment.center,
-      //   //   children: <Widget>[
-      //   //     Text(
-      //   //       'Programs',
-      //   //       style: TextStyle(
-      //   //         color: Colors.black,
-      //   //         fontSize: 20,
-      //   //       ),
-      //   //     ),
-      //   //   ],
-      //   // ),
-      //   centerTitle: true,
-      //   elevation: 0.0,
-      // ),
-      // drawer: MainDrawer(),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Programs',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        centerTitle: true,
+        elevation: 0.0,
+      ),
+      drawer: MainDrawer(),
       body: ListView.builder(
           itemCount: programsmodel.length,
           itemBuilder: (context, index) {
@@ -44,6 +45,7 @@ class _ProgramsState extends State<Programs> {
           }),
     );
   }
+}
 
   Widget programs(String imageUrl, String containerText) {
     return Padding(
@@ -87,4 +89,5 @@ class _ProgramsState extends State<Programs> {
       ),
     );
   }
-}
+
+
