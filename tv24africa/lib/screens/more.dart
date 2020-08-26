@@ -13,22 +13,22 @@ class _MoreState extends State<More> {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Color(0xFF262626),
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Programs',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-              ),
-            ),
-          ],
-        ),
-        centerTitle: true,
-        elevation: 0.0,
-      ),
+      // appBar: AppBar(
+      //   title: Row(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: <Widget>[
+      //       Text(
+      //         'Programs',
+      //         style: TextStyle(
+      //           color: Colors.black,
+      //           fontSize: 20,
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      //   centerTitle: true,
+      //   elevation: 0.0,
+      // ),
       drawer: MainDrawer(),
       body: ListView.builder(
           itemCount: programsmodel.length,

@@ -86,20 +86,20 @@ class _MainDrawerState extends State<MainDrawer> {
                       ),
                     ),
                   ),
-                  ListTile(
-                      leading: Icon(Icons.picture_in_picture, color: Colors.white,),
-                      title: Text('Programs',
-                          style: GoogleFonts.mcLaren(
-                            textStyle: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                            ),
-                          )),
-                      onTap: () {
-                        Navigator.of(context).pop();
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Programs()));
-                      }),
+                  // ListTile(
+                  //     leading: Icon(Icons.picture_in_picture, color: Colors.white,),
+                  //     title: Text('Programs',
+                  //         style: GoogleFonts.mcLaren(
+                  //           textStyle: TextStyle(
+                  //             color: Colors.white,
+                  //             fontSize: 15,
+                  //           ),
+                  //         )),
+                  //     onTap: () {
+                  //       Navigator.of(context).pop();
+                  //       Navigator.push(context,
+                  //           MaterialPageRoute(builder: (context) => Programs()));
+                  //     }),
                   // ListTile(
                   //     leading: Icon(Icons.schedule, color: Colors.white,),
                   //     title: Text('Schedule',

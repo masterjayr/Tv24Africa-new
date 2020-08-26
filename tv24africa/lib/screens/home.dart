@@ -3,6 +3,7 @@ import 'package:tv24africa/models/channel_models.dart';
 import 'package:tv24africa/services/youtube_api.dart';
 import 'package:tv24africa/models/video_model.dart';
 import 'package:tv24africa/screens/videos.dart' show VideoScreen;
+import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,6 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String liveVideoUrl = 'https://youtu.be/-c8LoR84Xjs';
+  final String phoneNumber1 = "08139027050";
 
   YoutubePlayerController _controller;
 
@@ -21,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     _controller = YoutubePlayerController(
-      initialVideoId: YoutubePlayer.convertUrlToId(liveVideoUrl));
+        initialVideoId: YoutubePlayer.convertUrlToId(liveVideoUrl));
     super.initState();
     _initChannel();
   }
@@ -148,16 +150,34 @@ class _HomePageState extends State<HomePage> {
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
-              expandedHeight: 400.0,
+              expandedHeight: MediaQuery.of(context).size.height / 2.6,
               floating: false,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
-                background:   YoutubePlayer(
-            controller: _controller,
-          ),
+                background: YoutubePlayer(
+                  controller: _controller,
+                ),
+                title: Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  alignment: Alignment.bottomRight,
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.phone_in_talk,
+                      color: Colors.red,
+                      size: 35,
+                    ),
+                    onPressed: () {
+                      callnow();
+                    },
+                  ),
+                  
+                ),
               ),
             ),
-            SliverFillRemaining(
+            SliverFillRemaining (
               child: _channel != null
                   ? NotificationListener<ScrollNotification>(
                       onNotification: (ScrollNotification scrollDetails) {
@@ -171,6 +191,7 @@ class _HomePageState extends State<HomePage> {
                         return false;
                       },
                       child: GridView.builder(
+                          physics: ClampingScrollPhysics(),
                         itemCount: 1 + _channel.videos.length,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2, crossAxisSpacing: 2.0),
@@ -190,10 +211,21 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
+
+                    
             )
           ],
-        ));
+        ),
+        );
+        
+  
   }
+callnow() {
+    String phoneNumber = "tel:" + phoneNumber1;
+    launch(phoneNumber);
+  }
+  
 }
+
 
 //UC6Dy0rQ6zDnQuHQ1EeErGUA
