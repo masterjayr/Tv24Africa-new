@@ -56,20 +56,26 @@ class _NewsState extends State<News> {
                                 // Image.network(imageUrl),
                                 Padding(
                                   padding: const EdgeInsets.all(10.0),
-                                  child: FadeInImage.assetNetwork(
-                                    placeholder: 'assets/images/load.gif',
-                                    image: imageUrl,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: FadeInImage.assetNetwork(
+                                      placeholder: 'assets/images/load.gif',
+                                      image: imageUrl,
+                                    ),
                                   ),
                                 ),
                                 // Expanded(child: Container()),
 
                                 Padding(
-                                  padding: const EdgeInsets.only(top:5.0),
-                                  child: Text(
-                                    wppost['title']['rendered'],
-                                    style: TextStyle(
-                                        fontSize: 20.5,
-                                        fontWeight: FontWeight.bold),
+                                  padding: const EdgeInsets.only(top: 5.0),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      wppost['title']['rendered'],
+                                      style: TextStyle(
+                                          fontSize: 20.5,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 Padding(
@@ -100,89 +106,82 @@ class _NewsState extends State<News> {
 
   void _onButtonPressed() {
     showModalBottomSheet(
+        backgroundColor: Colors.black87,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+        ),
         context: context,
         builder: (context) {
-          return Container(
-            decoration: BoxDecoration(
-                color: Colors.black87,
-                borderRadius: BorderRadius.only(
-                  topLeft: const Radius.circular(40),
-                  topRight: const Radius.circular(40),
-                )),
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: <Widget>[
-                    InkWell(
-                      child: ListTile(
-                          leading: CircleAvatar(
-                            backgroundImage: AssetImage("assets/images/1.jpg"),
-                          ),
-                          title: Text("Business",
-                              style: TextStyle(color: Colors.white)),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => BusinessCat()));
-                          }),
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                          backgroundImage: AssetImage("assets/images/4.jpg")),
-                      title:
-                          Text("In-Pictures", style: TextStyle(color: Colors.white)),
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Sport()));
-                      },
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                          backgroundImage: AssetImage("assets/images/2.jpg")),
-                      title: Text("Entertainment",
-                          style: TextStyle(color: Colors.white)),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Entertain()));
-                      },
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                          backgroundImage: AssetImage("assets/images/3.jpg")),
-                      title: Text("Politics",
-                          style: TextStyle(color: Colors.white)),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Politics()));
-                      },
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                          backgroundImage: AssetImage("assets/images/6.png")),
-                      title: Text("News Africa",
-                          style: TextStyle(color: Colors.white)),
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Africa()));
-                      },
-                    ),
-                    // ListTile(
-                    //   leading: CircleAvatar(
-                    //       backgroundImage: AssetImage("assets/images/tip.jpg")),
-                    //   title: Text("Tip", style: TextStyle(color: Colors.white)),
-                    //   onTap: () {
-                    //     Navigator.push(context,
-                    //         MaterialPageRoute(builder: (context) => Tip()));
-                    //   },
-                    // ),
-                  ],
-                ),
+          return Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  InkWell(
+                    child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage: AssetImage("assets/images/1.jpg"),
+                        ),
+                        title: Text("Business",
+                            style: TextStyle(color: Colors.white)),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BusinessCat()));
+                        }),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/4.jpg")),
+                    title: Text("In-Pictures",
+                        style: TextStyle(color: Colors.white)),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Sport()));
+                    },
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/2.jpg")),
+                    title: Text("Entertainment",
+                        style: TextStyle(color: Colors.white)),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Entertain()));
+                    },
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/3.jpg")),
+                    title:
+                        Text("Politics", style: TextStyle(color: Colors.white)),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Politics()));
+                    },
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/6.png")),
+                    title: Text("News Africa",
+                        style: TextStyle(color: Colors.white)),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Africa()));
+                    },
+                  ),
+                  // ListTile(
+                  //   leading: CircleAvatar(
+                  //       backgroundImage: AssetImage("assets/images/tip.jpg")),
+                  //   title: Text("Tip", style: TextStyle(color: Colors.white)),
+                  //   onTap: () {
+                  //     Navigator.push(context,
+                  //         MaterialPageRoute(builder: (context) => Tip()));
+                  //   },
+                  // ),
+                ],
               ),
             ),
           );

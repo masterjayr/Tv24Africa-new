@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../main.dart';
 import './home_drawer.dart';
 // import 'home.dart';
 
@@ -14,22 +15,23 @@ class _AboutState extends State<About> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('About'),
-        //   actions: <Widget>[
-        //   Padding(
-        //     padding: const EdgeInsets.only(right: 10.0),
-        //     child: IconButton(
-        //       icon: Icon(
-        //         Icons.home,
-        //         color: Colors.black,
-        //       ),
-        //       onPressed: () {
-        //         Navigator.of(context).pop();
-        //         Navigator.push(context,
-        //             MaterialPageRoute(builder: (context) => HomePage()));
-        //       },
-        //     ),
-        //   )
-        // ],
+          actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+            child: IconButton(
+              icon: Icon(
+                Icons.home,
+                color: Colors.redAccent[700],
+                size: 30,
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyApp()));
+              },
+            ),
+          )
+        ],
         elevation: 0.0,
         centerTitle: true,
 

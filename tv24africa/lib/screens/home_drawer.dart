@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tv24africa/screens/citizens_report.dart';
 import 'package:tv24africa/screens/listen_live.dart';
 import 'package:tv24africa/screens/podcast.dart';
-import 'package:tv24africa/screens/programs.dart';
-// import 'package:tv24africa/screens/schedule.dart';
 import 'package:tv24africa/screens/settings.dart';
+import 'package:tv24africa/screens/submit_pitch.dart';
+import 'package:tv24africa/screens/submit_story.dart';
 import './about.dart';
-import 'clips.dart';
+// import 'clips.dart';
 
 class MainDrawer extends StatefulWidget {
   @override
@@ -81,7 +80,7 @@ class _MainDrawerState extends State<MainDrawer> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => CitizensReport()));
+                                      builder: (context) => SubmitPitch()));
                             }),
                       ),
                     ),
@@ -100,22 +99,22 @@ class _MainDrawerState extends State<MainDrawer> {
                   //       Navigator.push(context,
                   //           MaterialPageRoute(builder: (context) => Programs()));
                   //     }),
-                  // ListTile(
-                  //     leading: Icon(Icons.schedule, color: Colors.white,),
-                  //     title: Text('Schedule',
-                  //         style: GoogleFonts.mcLaren(
-                  //           textStyle: TextStyle(
-                  //             color: Colors.white,
-                  //             fontSize: 15,
-                  //           ),
-                  //         )),
-                  //     onTap: () {
-                  //       Navigator.of(context).pop();
-                  //       Navigator.push(
-                  //           context,
-                  //           MaterialPageRoute(
-                  //               builder: (context) => Schedule()));
-                  //     }),
+                  ListTile(
+                      leading: Icon(Icons.add_comment, color: Colors.white,),
+                      title: Text('Submit Your Story',
+                          style: GoogleFonts.mcLaren(
+                            textStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                            ),
+                          )),
+                      onTap: () {
+                        Navigator.of(context).pop();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Story()));
+                      }),
                   ListTile(
                     leading: Icon(Icons.info, color: Colors.white),
                     title: Text('About',
@@ -131,21 +130,21 @@ class _MainDrawerState extends State<MainDrawer> {
                           MaterialPageRoute(builder: (context) => About()));
                     },
                   ),
-                  ListTile(
-                    leading: Icon(Icons.switch_video, color: Colors.white),
-                    title: Text('Videos',
-                        style: GoogleFonts.mcLaren(
-                          textStyle: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                          ),
-                        )),
-                    onTap: () {
-                      Navigator.of(context).pop();
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ClipVideosMan()));
-                    },
-                  ),
+                  // ListTile(
+                  //   leading: Icon(Icons.switch_video, color: Colors.white),
+                  //   title: Text('Videos',
+                  //       style: GoogleFonts.mcLaren(
+                  //         textStyle: TextStyle(
+                  //           color: Colors.white,
+                  //           fontSize: 15,
+                  //         ),
+                  //       )),
+                  //   onTap: () {
+                  //     Navigator.of(context).pop();
+                  //     Navigator.push(context,
+                  //         MaterialPageRoute(builder: (context) => ClipVideosMan()));
+                  //   },
+                  // ),
                   ListTile(
                       leading: Icon(Icons.settings, color: Colors.white),
                       title: Text('Settings',
@@ -191,13 +190,27 @@ class _MainDrawerState extends State<MainDrawer> {
                         Navigator.of(context).pop();
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => PodCast()));
-                      })
-                ],
+                      }),
+        // ListTile(
+        //   leading: Icon(Icons.tag_faces,),
+        //   title: Text("This is a title"),
+        //   subtitle: Text("This is subtitle"),
+        //   trailing: Row(          
+        //     children: <Widget>[
+        //     Icon(Icons.f),
+        //     Icon(Icons.flight_land)
+        //   ]),
+        // )
+      ]
+    ),
+              
+
               ),
+
             ),
           ),
         ),
-      ),
+      
     );
   }
 }

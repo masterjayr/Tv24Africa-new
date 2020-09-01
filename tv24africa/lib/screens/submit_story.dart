@@ -1,3 +1,86 @@
+// import 'package:flutter/material.dart';
+// import 'package:tv24africa/screens/progresshud.dart';
+
+// import 'package:webview_flutter/webview_flutter.dart';
+
+// import '../main.dart';
+
+// // import 'home.dart';
+
+// class Story extends StatefulWidget {
+//   @override
+//   _StoryState createState() => _StoryState();
+// }
+
+// class _StoryState extends State<Story> {
+//  bool _isLoading = true;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//          appBar: AppBar(
+//         title: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//             Text(
+//               'Submit Your Story',
+//               style: TextStyle(
+//                 color: Colors.black,
+//                 fontSize: 20,
+//               ), // fontFamily: ,
+//             ),
+//           ],
+//         ),
+//          actions:<Widget>[
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: IconButton(
+//       icon: Icon(
+//         Icons.home,
+//         color: Colors.red,
+//         size: 29,
+//       ),
+//       onPressed: () {
+//        Navigator.of(context).pop();
+//                         Navigator.push(
+//                             context,
+//                             MaterialPageRoute(
+//                                 builder: (context) => MyApp()));
+//       },
+//     ),
+//             )
+//         ],
+//         centerTitle: true,
+//         elevation: 0.0,
+//       ),
+
+//       body: ProgressHUD(
+//           child: Padding(
+//             padding: EdgeInsets.all(10.0),
+//             child: Stack(
+//               children: <Widget>[
+//                 WebView(
+//                   initialUrl:"https://news.tv24africa.com/submityourstory/",
+//                   javascriptMode: JavascriptMode.unrestricted,
+
+//                   onPageFinished: pageFinishedLoading,
+//                 ),
+//               ],
+//             ),
+//           ),
+//           inAsyncCall: _isLoading,
+//           opacity: 0.0,
+//         )
+//       //
+//     );
+//   }
+//   void pageFinishedLoading(String url) {
+//     setState(() {
+//       _isLoading = false;
+//     });
+//   }
+// }
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -6,15 +89,15 @@ import '../main.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(new PodCast());
+  runApp(new Story());
 }
 
-class PodCast extends StatefulWidget {
+class Story extends StatefulWidget {
   @override
-  _PodCastState createState() => new _PodCastState();
+  _StoryState createState() => new _StoryState();
 }
 
-class _PodCastState extends State<PodCast> {
+class _StoryState extends State<Story> {
   InAppWebViewController webView;
   String url = "";
   double progress = 0;
@@ -36,10 +119,7 @@ class _PodCastState extends State<PodCast> {
       home: Scaffold(
         appBar: AppBar(
           leading: new IconButton(
-              icon: new Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-              ),
+              icon: new Icon(Icons.arrow_back,color: Colors.black,),
               onPressed: () {
                 Navigator.pop(context, true);
               }),
@@ -48,7 +128,7 @@ class _PodCastState extends State<PodCast> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'PodCast',
+                'Submit Your Story',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
@@ -62,7 +142,7 @@ class _PodCastState extends State<PodCast> {
               child: IconButton(
                 icon: Icon(
                   Icons.home,
-                  color: Colors.redAccent[700],
+                  color: Colors.red,
                   size: 29,
                 ),
                 onPressed: () {
@@ -89,7 +169,7 @@ class _PodCastState extends State<PodCast> {
               decoration:
                   BoxDecoration(border: Border.all(color: Colors.white)),
               child: InAppWebView(
-                initialUrl: "https://tv24africa.com/podcast-3/",
+                initialUrl: "https://news.tv24africa.com/submityourstory/",
                 initialHeaders: {},
                 initialOptions: InAppWebViewGroupOptions(
                     crossPlatform: InAppWebViewOptions(

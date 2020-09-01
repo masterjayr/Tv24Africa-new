@@ -1,12 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:tv24africa/models/video_model.dart';
 
 class VideoScreen extends StatefulWidget {
 
-  final String id;
+  final Video video;
 
-  VideoScreen({this.id});
+  VideoScreen({this.video});
 
   @override
   _VideoScreenState createState() => _VideoScreenState();
@@ -21,7 +22,7 @@ class _VideoScreenState extends State<VideoScreen> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: widget.id,
+      initialVideoId: widget.video.id,
       flags: YoutubePlayerFlags(
         mute: false,
         autoPlay: true,
@@ -34,12 +35,30 @@ class _VideoScreenState extends State<VideoScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       // appBar: AppBar(),
-      body: YoutubePlayer(
-        controller: _controller,
-        showVideoProgressIndicator: true,
-        onReady: () {
-          print('Player is ready.');
-        },
+      body: Column(
+        children: [
+          YoutubePlayer(
+            controller: _controller,
+            showVideoProgressIndicator: true,
+            onReady: () {
+              print('Player is ready.');
+            },
+          ),
+          SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Expanded(
+                child: Text(
+                  widget.video.title,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+          ),
+        ],
       ),
     );
   }

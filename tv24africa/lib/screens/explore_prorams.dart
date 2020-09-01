@@ -1,67 +1,24 @@
 // import 'package:flutter/material.dart';
 // import 'package:tv24africa/screens/progresshud.dart';
-
 // import 'package:webview_flutter/webview_flutter.dart';
 
-// import '../main.dart';
-
-// // import 'home.dart';
-
-// class ListenLive extends StatefulWidget {
+// class ExplorePrograms extends StatefulWidget {
 //   @override
-//   _ListenLiveState createState() => _ListenLiveState();
+//   _ExploreProgramsState createState() => _ExploreProgramsState();
 // }
 
-// class _ListenLiveState extends State<ListenLive> {
-//  bool _isLoading = true;
-
+// class _ExploreProgramsState extends State<ExplorePrograms> {
+//   bool _isLoading = true;
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-//          appBar: AppBar(
-//         title: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: <Widget>[
-//             Text(
-//               'Listen Live',
-//               style: TextStyle(
-//                 color: Colors.black,
-//                 fontSize: 20,
-//               ), // fontFamily: ,
-//             ),
-            
-//           ],
-//         ),
-//         actions:<Widget>[
-//             Padding(
-//               padding: const EdgeInsets.all(8.0),
-//               child: IconButton(
-//       icon: Icon(
-//         Icons.home,
-//         color: Colors.red,
-//         size: 29,
-//       ),
-//       onPressed: () {
-//        Navigator.of(context).pop();
-//                         Navigator.push(
-//                             context,
-//                             MaterialPageRoute(
-//                                 builder: (context) => MyApp()));
-//       },
-//     ),
-//             )
-//         ],
-//         centerTitle: true,
-//         elevation: 0.0,
-//       ),
-
 //       body: ProgressHUD(
 //           child: Padding(
 //             padding: EdgeInsets.all(10.0),
 //             child: Stack(
 //               children: <Widget>[
 //                 WebView(
-//                   initialUrl:"https://tv24africa.com/listen-live/",
+//                   initialUrl:"https://tv24africa.com/programmes/",
 //                   javascriptMode: JavascriptMode.unrestricted,
 
 //                   onPageFinished: pageFinishedLoading,
@@ -83,23 +40,25 @@
 // }
 
 
+
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
-import '../main.dart';
+// import '../main.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(new ListenLive());
+  runApp(new ExplorePrograms());
 }
 
-class ListenLive extends StatefulWidget {
+class ExplorePrograms extends StatefulWidget {
   @override
-  _ListenLiveState createState() => new _ListenLiveState();
+  _ExploreProgramsState createState() => new _ExploreProgramsState();
 }
 
-class _ListenLiveState extends State<ListenLive> {
+class _ExploreProgramsState extends State<ExplorePrograms> {
 
   InAppWebViewController webView;
   String url = "";
@@ -120,47 +79,7 @@ class _ListenLiveState extends State<ListenLive> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-           leading: new IconButton(
-              icon: new Icon(Icons.arrow_back,color: Colors.black,),
-              onPressed: () {
-                Navigator.pop(context, true);
-              }),
-          backgroundColor: Colors.white,
-        title: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Listen Live',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-              ), // fontFamily: ,
-            ),
-          ],
-        ),
-         actions:<Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: IconButton(
-      icon: Icon(
-        Icons.home,
-        color: Colors.redAccent[700],
-        size: 29,
-      ),
-      onPressed: () {
-       Navigator.of(context).pop();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => MyApp()));
-      },
-    ),
-            )
-        ],
-        centerTitle: true,
-        elevation: 0.0,
-      ),
+    //    
         body: Container(
           child: Column(children: <Widget>[
             Container(
@@ -175,7 +94,7 @@ class _ListenLiveState extends State<ListenLive> {
                     BoxDecoration(border: Border.all(color: Colors.white)
                     ),
                 child: InAppWebView(
-                  initialUrl: "https://tv24africa.com/listen-live/",
+                  initialUrl: "https://tv24africa.com/programmes/",
                   initialHeaders: {},
                   initialOptions: InAppWebViewGroupOptions(
                     crossPlatform: InAppWebViewOptions(
@@ -197,7 +116,7 @@ class _ListenLiveState extends State<ListenLive> {
                   },
                   onProgressChanged: (InAppWebViewController controller, int progress) {
                     setState(() {
-                      this.progress = progress / 100;
+                      this.progress = progress / 20;
                     });
                   },
                 ),

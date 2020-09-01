@@ -1,38 +1,35 @@
 // import 'package:flutter/material.dart';
 // import 'package:tv24africa/screens/progresshud.dart';
-
 // import 'package:webview_flutter/webview_flutter.dart';
 
 // import '../main.dart';
 
-// // import 'home.dart';
+// class SubmitPitch extends StatefulWidget {
 
-// class ListenLive extends StatefulWidget {
 //   @override
-//   _ListenLiveState createState() => _ListenLiveState();
+//   _SubmitPitchState createState() => _SubmitPitchState();
 // }
 
-// class _ListenLiveState extends State<ListenLive> {
-//  bool _isLoading = true;
+// class _SubmitPitchState extends State<SubmitPitch> {
+//    bool _isLoading = true;
 
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-//          appBar: AppBar(
+//       appBar: AppBar(
 //         title: Column(
 //           mainAxisAlignment: MainAxisAlignment.center,
 //           children: <Widget>[
 //             Text(
-//               'Listen Live',
+//               'Submit Your Pitch',
 //               style: TextStyle(
 //                 color: Colors.black,
 //                 fontSize: 20,
 //               ), // fontFamily: ,
 //             ),
-            
 //           ],
 //         ),
-//         actions:<Widget>[
+//          actions:<Widget>[
 //             Padding(
 //               padding: const EdgeInsets.all(8.0),
 //               child: IconButton(
@@ -55,13 +52,14 @@
 //         elevation: 0.0,
 //       ),
 
-//       body: ProgressHUD(
+
+//        body: ProgressHUD(
 //           child: Padding(
 //             padding: EdgeInsets.all(10.0),
 //             child: Stack(
 //               children: <Widget>[
 //                 WebView(
-//                   initialUrl:"https://tv24africa.com/listen-live/",
+//                   initialUrl:"https://tv24africa.com/citizen-reporters/",
 //                   javascriptMode: JavascriptMode.unrestricted,
 
 //                   onPageFinished: pageFinishedLoading,
@@ -72,15 +70,18 @@
 //           inAsyncCall: _isLoading,
 //           opacity: 0.0,
 //         )
-//       //
-//     );
+//         );
 //   }
-//   void pageFinishedLoading(String url) {
+
+//    void pageFinishedLoading(String url) {
 //     setState(() {
 //       _isLoading = false;
 //     });
 //   }
 // }
+
+
+
 
 
 import 'dart:async';
@@ -91,15 +92,15 @@ import '../main.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(new ListenLive());
+  runApp(new SubmitPitch());
 }
 
-class ListenLive extends StatefulWidget {
+class SubmitPitch extends StatefulWidget {
   @override
-  _ListenLiveState createState() => new _ListenLiveState();
+  _SubmitPitchState createState() => new _SubmitPitchState();
 }
 
-class _ListenLiveState extends State<ListenLive> {
+class _SubmitPitchState extends State<SubmitPitch> {
 
   InAppWebViewController webView;
   String url = "";
@@ -131,7 +132,7 @@ class _ListenLiveState extends State<ListenLive> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Listen Live',
+              'Submit Your Pitch',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20,
@@ -145,7 +146,7 @@ class _ListenLiveState extends State<ListenLive> {
               child: IconButton(
       icon: Icon(
         Icons.home,
-        color: Colors.redAccent[700],
+        color: Colors.red,
         size: 29,
       ),
       onPressed: () {

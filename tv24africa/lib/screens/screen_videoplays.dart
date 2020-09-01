@@ -16,7 +16,6 @@ class _TheRealVideoState extends State<TheRealVideo> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _chewieController = ChewieController(
         videoPlayerController: widget.videoPlayerController,
