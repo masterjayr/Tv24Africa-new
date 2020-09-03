@@ -15,28 +15,23 @@ class _HomePageState extends State<HomePage> {
   String liveVideoUrl = 'https://youtu.be/-c8LoR84Xjs';
   final String phoneNumber1 = "08139027050";
 
-  YoutubePlayerController _controller;
-
   Channel _channel;
   bool _isLoading = false;
 
+  YoutubePlayerController _controller;
   @override
   void initState() {
-    _controller = YoutubePlayerController(
-        initialVideoId: YoutubePlayer.convertUrlToId(liveVideoUrl),
-          flags:
-    YoutubePlayerFlags(
-
-      hideControls: false,
-      autoPlay: false,
-      mute: false,
-      // isLive: true,
-    ),
-
-        );
-        
-  
     super.initState();
+    _controller = YoutubePlayerController(
+      initialVideoId: YoutubePlayer.convertUrlToId(liveVideoUrl),
+      flags: YoutubePlayerFlags(
+        hideControls: false,
+        autoPlay: true,
+        mute: false,
+        // isLive: true,
+      ),
+    );
+
     _initChannel();
   }
 
@@ -47,7 +42,6 @@ class _HomePageState extends State<HomePage> {
       _channel = channel;
     });
   }
-
 
   _buildVideo(Video video) {
     return GestureDetector(
@@ -98,11 +92,10 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Color(0XFF1a1a1a),
+      backgroundColor: Color(0XFF1a1a1a),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -111,34 +104,39 @@ class _HomePageState extends State<HomePage> {
             pinned: false,
             flexibleSpace: FlexibleSpaceBar(
               background: YoutubePlayer(
-                showVideoProgressIndicator: true,
-                controller: _controller,
-              ),
+                  controller: _controller,
+                  showVideoProgressIndicator: true,
+                  onReady: () {
+                    print('Player is ready.');
+                  }),
               title: Container(
                 // padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
                 ),
                 alignment: Alignment.bottomRight,
-                child: IconButton(
-                  color: Colors.white,
-                  icon: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: Color(0xFF800000),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Icon(
-                        Icons.call,
-                        color: Colors.white,
-                        size: 25,
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: IconButton(
+                    color: Colors.white,
+                    icon: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: Color(0xFF800000),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Icon(
+                          Icons.call,
+                          color: Colors.white,
+                          size: 25,
+                        ),
                       ),
                     ),
+                    onPressed: () {
+                      callnow();
+                    },
                   ),
-                  onPressed: () {
-                    callnow();
-                  },
                 ),
               ),
             ),
@@ -166,9 +164,9 @@ class _HomePageState extends State<HomePage> {
                     //     Theme.of(context).secondaryHeaderColor, // Red
                     //   ),
                     // ),
-                     child: CircularProgressIndicator(),
+                    child: CircularProgressIndicator(),
                   ),
-                  hasScrollBody: true,
+            hasScrollBody: true,
           )
         ],
       ),

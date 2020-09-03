@@ -12,10 +12,11 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.black,
+      backgroundColor: Colors.black,
       appBar: AppBar(title: Text('Settings')),
       body: SettingsList(
-        backgroundColor: Color(0xFF800000),
+        // backgroundColor: Color(0xFF800000),
+         backgroundColor: Colors.black,
         sections: [
           SettingsSection(
             title: 'Preferences',

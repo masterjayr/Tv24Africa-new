@@ -70,7 +70,7 @@ class _MainDrawerState extends State<MainDrawer> {
                     child: SingleChildScrollView(
                       child: Container(
                         child: ListTile(
-                            leading: Icon(Icons.report, color: Colors.redAccent[700]),
+                            leading: Icon(Icons.report, color: Color(0xFF800000)),
                             title: Text('Submit Your Pitch  ',
                                 style: GoogleFonts.mcLaren(
                                   textStyle: TextStyle(
@@ -103,7 +103,7 @@ class _MainDrawerState extends State<MainDrawer> {
                   //           MaterialPageRoute(builder: (context) => Programs()));
                   //     }),
                   ListTile(
-                      leading: Icon(Icons.add_comment, color: Colors.redAccent[700],),
+                      leading: Icon(Icons.add_comment, color: Color(0xFF800000),),
                       title: Text('Submit Your Story',
                           style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
@@ -119,7 +119,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 builder: (context) => Story()));
                       }),
                   ListTile(
-                    leading: Icon(Icons.info, color: Colors.redAccent[700]),
+                    leading: Icon(Icons.info, color:Color(0xFF800000)),
                     title: Text('About',
                         style: GoogleFonts.mcLaren(
                           textStyle: TextStyle(
@@ -149,7 +149,7 @@ class _MainDrawerState extends State<MainDrawer> {
                   //   },
                   // ),
                   ListTile(
-                      leading: Icon(Icons.settings, color: Colors.redAccent[700]),
+                      leading: Icon(Icons.settings, color: Color(0xFF800000)),
                       title: Text('Settings',
                           style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
@@ -165,7 +165,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 builder: (context) => SettingsPage()));
                       }),
                   ListTile(
-                      leading: Icon(Icons.audiotrack, color:Colors.redAccent[700]),
+                      leading: Icon(Icons.audiotrack, color:Color(0xFF800000)),
                       title: Text('Listen Live',
                           style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
@@ -181,7 +181,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 builder: (context) => ListenLive()));
                       }),
                   ListTile(
-                      leading: Icon(Icons.record_voice_over, color: Colors.redAccent[700]),
+                      leading: Icon(Icons.record_voice_over, color: Color(0xFF800000)),
                       title: Text('Podcast',
                           style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
