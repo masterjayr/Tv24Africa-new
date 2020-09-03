@@ -45,8 +45,9 @@ class _NewsState extends State<News> {
                                   builder: (context) => FeedDetails(wppost)));
                         },
                         child: Card(
+                          // color: Color(0xFF202020),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(8),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -57,7 +58,7 @@ class _NewsState extends State<News> {
                                 Padding(
                                   padding: const EdgeInsets.all(10.0),
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(8),
                                     child: FadeInImage.assetNetwork(
                                       placeholder: 'assets/images/load.gif',
                                       image: imageUrl,
@@ -73,6 +74,7 @@ class _NewsState extends State<News> {
                                     child: Text(
                                       wppost['title']['rendered'],
                                       style: TextStyle(
+                                        color: Colors.black,
                                           fontSize: 20.5,
                                           fontWeight: FontWeight.bold),
                                     ),
@@ -106,15 +108,15 @@ class _NewsState extends State<News> {
 
   void _onButtonPressed() {
     showModalBottomSheet(
-        backgroundColor: Colors.black87,
+        backgroundColor: Color(0xFF1a1a1a),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+              topLeft: Radius.circular(50), topRight: Radius.circular(50)),
         ),
         context: context,
         builder: (context) {
           return Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.all(10.0),
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[

@@ -12,7 +12,8 @@ class _BusinessCatState extends State<BusinessCat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF1a1a1a),
       appBar: AppBar(
         title: Text("Business"),
         elevation: 0.0,
@@ -39,7 +40,7 @@ class _BusinessCatState extends State<BusinessCat> {
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -52,6 +53,7 @@ class _BusinessCatState extends State<BusinessCat> {
                                   placeholder: 'assets/images/load.gif',
                                   image: imageUrl,
                                 ),
+                                SizedBox(height: 10 ),
                                 Text(
                                   wppost['title']['rendered'],
                                   style: TextStyle(

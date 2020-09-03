@@ -33,8 +33,7 @@ class _VideoScreenState extends State<VideoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      // appBar: AppBar(),
+      backgroundColor: Color(0xFF1a1a1a),
       body: Column(
         children: [
           YoutubePlayer(
@@ -51,7 +50,7 @@ class _VideoScreenState extends State<VideoScreen> {
                 child: Text(
                   widget.video.title,
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 20.0,
                     fontWeight: FontWeight.w500,
                   ),

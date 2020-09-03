@@ -36,12 +36,12 @@ class _MyAppState extends State<MyApp> {
       title: 'Tv24 Africa',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.white,
+        primaryColor: Color(0xFF262626),
         secondaryHeaderColor: Color(0xFF262626),
-        // canvasColor: Colors.transparent,
+        canvasColor: Color(0xFF262626),
       ),
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF262626),
         appBar: AppBar(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -49,14 +49,14 @@ class _MyAppState extends State<MyApp> {
               Text('Tv24',
                   style: GoogleFonts.mcLaren(
                     textStyle: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 20,
                     ),
                   )),
               Text('Africa',
                   style: GoogleFonts.mcLaren(
                     textStyle: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 20,
                     ),
                   )),
@@ -71,10 +71,9 @@ class _MyAppState extends State<MyApp> {
         ),
         // backgroundColor: Colors.black12,
         bottomNavigationBar: BottomNavigationBar(
-          // type: BottomNavigationBarType.shifting,
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xFF262626),
           selectedItemColor: Colors.redAccent[700],
-          unselectedItemColor:Colors.black,
+          unselectedItemColor:Colors.white,
           currentIndex: _currentIndex,
           onTap: (value) {
             _currentIndex = value;
@@ -91,7 +90,7 @@ class _MyAppState extends State<MyApp> {
             ),
             //
             BottomNavigationBarItem(
-              icon: Icon(Icons.library_books),
+              icon: Icon(Icons.library_books, size: 25),
               title: Text('NewsPaper'),
             ),
              BottomNavigationBarItem(

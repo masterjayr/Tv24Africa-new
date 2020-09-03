@@ -120,20 +120,22 @@ class _ListenLiveState extends State<ListenLive> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Color(0xFF1a1a1a),
         appBar: AppBar(
+          backgroundColor: Color(0xFF1a1a1a),
            leading: new IconButton(
-              icon: new Icon(Icons.arrow_back,color: Colors.black,),
+              icon: new Icon(Icons.arrow_back,color: Colors.white,),
               onPressed: () {
                 Navigator.pop(context, true);
               }),
-          backgroundColor: Colors.white,
+          // backgroundColor: Colors.white,
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               'Listen Live',
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 20,
               ), // fontFamily: ,
             ),
@@ -172,7 +174,7 @@ class _ListenLiveState extends State<ListenLive> {
               child: Container(
                 margin: const EdgeInsets.all(10.0),
                 decoration:
-                    BoxDecoration(border: Border.all(color: Colors.white)
+                    BoxDecoration(border: Border.all(color: Colors.black)
                     ),
                 child: InAppWebView(
                   initialUrl: "https://tv24africa.com/listen-live/",
@@ -207,7 +209,8 @@ class _ListenLiveState extends State<ListenLive> {
               alignment: MainAxisAlignment.center,
               children: <Widget>[
                 RaisedButton(
-                  child: Icon(Icons.arrow_back, color: Colors.redAccent[700]),
+                  color: Colors.white,
+                  child: Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () {
                     if (webView != null) {
                       webView.goBack();
@@ -215,7 +218,8 @@ class _ListenLiveState extends State<ListenLive> {
                   },
                 ),
                  RaisedButton(
-                  child: Icon(Icons.refresh, color: Colors.redAccent[700]),
+                   color: Colors.white,
+                  child: Icon(Icons.refresh, color: Colors.black),
                   onPressed: () {
                     if (webView != null) {
                       webView.reload();
@@ -223,7 +227,8 @@ class _ListenLiveState extends State<ListenLive> {
                   },
                 ),
                 RaisedButton(
-                  child: Icon(Icons.arrow_forward, color: Colors.redAccent[700],),
+                  color: Colors.white,
+                  child: Icon(Icons.arrow_forward, color: Colors.black),
                   onPressed: () {
                     if (webView != null) {
                       webView.goForward();

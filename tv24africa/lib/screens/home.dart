@@ -26,9 +26,11 @@ class _HomePageState extends State<HomePage> {
         initialVideoId: YoutubePlayer.convertUrlToId(liveVideoUrl),
           flags:
     YoutubePlayerFlags(
-      autoPlay: true,
+
+      hideControls: false,
+      autoPlay: false,
       mute: false,
-      isLive: true,
+      // isLive: true,
     ),
 
         );
@@ -60,30 +62,31 @@ class _HomePageState extends State<HomePage> {
         padding: EdgeInsets.all(10.0),
         height: 150.0,
         decoration: BoxDecoration(
-          borderRadius: BorderRadiusDirectional.circular(20),
-          color: Colors.white,
+          borderRadius: BorderRadiusDirectional.circular(8),
+          color: Color(0xFF000000),
           boxShadow: [
             BoxShadow(
-              color: Colors.black12,
-              offset: Offset(4, 1),
-              blurRadius: 9.0,
+              color: Colors.black45,
+              offset: Offset(1, 0),
+              blurRadius: 4.0,
             ),
           ],
         ),
         child: Column(
           children: <Widget>[
             ClipRRect(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(8),
               child: Image(
                 image: NetworkImage(video.thumbnailUrl),
+                fit: BoxFit.contain,
               ),
             ),
-            SizedBox(width: 15.0),
+            SizedBox(width: 15.0, height: 8),
             Expanded(
               child: Text(
                 video.title,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontSize: 12.0,
                   fontWeight: FontWeight.w500,
                 ),
@@ -99,7 +102,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor:Color(0XFF1a1a1a),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -109,7 +112,6 @@ class _HomePageState extends State<HomePage> {
             flexibleSpace: FlexibleSpaceBar(
               background: YoutubePlayer(
                 showVideoProgressIndicator: true,
-
                 controller: _controller,
               ),
               title: Container(
@@ -123,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                   icon: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
-                      color: Colors.redAccent[700],
+                      color: Color(0xFF800000),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(4.0),
@@ -145,13 +147,6 @@ class _HomePageState extends State<HomePage> {
             child: _channel != null
                 ? NotificationListener<ScrollNotification>(
                     onNotification: (ScrollNotification scrollDetails) {
-                      // if (!_isLoading &&
-                      //     _channel.videos.length !=
-                      //         int.parse(_channel.videoCount) &&
-                      //     scrollDetails.metrics.pixels ==
-                      //         scrollDetails.metrics.maxScrollExtent) {
-                      //   // _loadMoreVideos();
-                      // }
                       return false;
                     },
                     child: GridView.builder(
@@ -166,11 +161,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                   )
                 : Center(
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        Theme.of(context).secondaryHeaderColor, // Red
-                      ),
-                    ),
+                    // child: CircularProgressIndicator(
+                    //   valueColor: AlwaysStoppedAnimation<Color>(
+                    //     Theme.of(context).secondaryHeaderColor, // Red
+                    //   ),
+                    // ),
+                     child: CircularProgressIndicator(),
                   ),
                   hasScrollBody: true,
           )

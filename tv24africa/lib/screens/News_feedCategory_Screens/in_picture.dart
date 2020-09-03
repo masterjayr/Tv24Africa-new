@@ -12,7 +12,8 @@ class _SportState extends State<Sport> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF1a1a1a),
       appBar: AppBar(
         title: Text("In-Pictures"),
         elevation: 0.0,
@@ -51,6 +52,7 @@ class _SportState extends State<Sport> {
                                   placeholder: 'assets/images/load.gif',
                                   image: imageUrl,
                                 ),
+                                SizedBox(height: 10 ),
                                 Text(
                                   wppost['title']['rendered'],
                                   style: TextStyle(

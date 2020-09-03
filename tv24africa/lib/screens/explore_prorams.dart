@@ -79,7 +79,7 @@ class _ExploreProgramsState extends State<ExplorePrograms> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-    //    
+       backgroundColor: Colors.black,
         body: Container(
           child: Column(children: <Widget>[
             Container(
@@ -89,9 +89,9 @@ class _ExploreProgramsState extends State<ExplorePrograms> {
                     : Container()),
             Expanded(
               child: Container(
-                margin: const EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(8.0),
                 decoration:
-                    BoxDecoration(border: Border.all(color: Colors.white)
+                    BoxDecoration(border: Border.all(color: Colors.black)
                     ),
                 child: InAppWebView(
                   initialUrl: "https://tv24africa.com/programmes/",
@@ -126,7 +126,8 @@ class _ExploreProgramsState extends State<ExplorePrograms> {
               alignment: MainAxisAlignment.center,
               children: <Widget>[
                 RaisedButton(
-                  child: Icon(Icons.arrow_back, color: Colors.redAccent[700]),
+                  color: Colors.white,
+                  child: Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () {
                     if (webView != null) {
                       webView.goBack();
@@ -134,7 +135,8 @@ class _ExploreProgramsState extends State<ExplorePrograms> {
                   },
                 ),
                  RaisedButton(
-                  child: Icon(Icons.refresh, color: Colors.redAccent[700]),
+                   color: Colors.white,
+                  child: Icon(Icons.refresh, color: Colors.black),
                   onPressed: () {
                     if (webView != null) {
                       webView.reload();
@@ -142,7 +144,8 @@ class _ExploreProgramsState extends State<ExplorePrograms> {
                   },
                 ),
                 RaisedButton(
-                  child: Icon(Icons.arrow_forward, color: Colors.redAccent[700],),
+                  color: Colors.white,
+                  child: Icon(Icons.arrow_forward, color: Colors.black,),
                   onPressed: () {
                     if (webView != null) {
                       webView.goForward();

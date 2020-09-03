@@ -31,7 +31,7 @@ class _MainDrawerState extends State<MainDrawer> {
                   Container(
                     width: double.infinity,
                     padding: EdgeInsets.all(30),
-                    color: Color(0xFF262626),
+                    color: Color(0xFF1a1a1a),
                     child: Center(
                       child: Column(
                         children: <Widget>[
@@ -50,6 +50,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                   fit: BoxFit.fill,
                                 ),
                               ),
+                             
                             ),
                           ),
                           Text('Tv24 Africa',
@@ -58,7 +59,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                   color: Colors.white,
                                   fontSize: 30,
                                 ),
-                              )),
+                              ),
+                              ),
+
                         ],
                       ),
                     ),
@@ -67,7 +70,7 @@ class _MainDrawerState extends State<MainDrawer> {
                     child: SingleChildScrollView(
                       child: Container(
                         child: ListTile(
-                            leading: Icon(Icons.report, color: Colors.white),
+                            leading: Icon(Icons.report, color: Colors.redAccent[700]),
                             title: Text('Submit Your Pitch  ',
                                 style: GoogleFonts.mcLaren(
                                   textStyle: TextStyle(
@@ -100,7 +103,7 @@ class _MainDrawerState extends State<MainDrawer> {
                   //           MaterialPageRoute(builder: (context) => Programs()));
                   //     }),
                   ListTile(
-                      leading: Icon(Icons.add_comment, color: Colors.white,),
+                      leading: Icon(Icons.add_comment, color: Colors.redAccent[700],),
                       title: Text('Submit Your Story',
                           style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
@@ -116,7 +119,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 builder: (context) => Story()));
                       }),
                   ListTile(
-                    leading: Icon(Icons.info, color: Colors.white),
+                    leading: Icon(Icons.info, color: Colors.redAccent[700]),
                     title: Text('About',
                         style: GoogleFonts.mcLaren(
                           textStyle: TextStyle(
@@ -146,7 +149,7 @@ class _MainDrawerState extends State<MainDrawer> {
                   //   },
                   // ),
                   ListTile(
-                      leading: Icon(Icons.settings, color: Colors.white),
+                      leading: Icon(Icons.settings, color: Colors.redAccent[700]),
                       title: Text('Settings',
                           style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
@@ -162,7 +165,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 builder: (context) => SettingsPage()));
                       }),
                   ListTile(
-                      leading: Icon(Icons.audiotrack, color:Colors.white),
+                      leading: Icon(Icons.audiotrack, color:Colors.redAccent[700]),
                       title: Text('Listen Live',
                           style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
@@ -178,7 +181,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 builder: (context) => ListenLive()));
                       }),
                   ListTile(
-                      leading: Icon(Icons.record_voice_over, color: Colors.white),
+                      leading: Icon(Icons.record_voice_over, color: Colors.redAccent[700]),
                       title: Text('Podcast',
                           style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(

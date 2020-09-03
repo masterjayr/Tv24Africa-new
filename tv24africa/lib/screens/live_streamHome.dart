@@ -92,35 +92,35 @@ class _LiveStreamState extends State<LiveStream> {
       ),
       child: Container(
         
-        margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
-        padding: EdgeInsets.all(10.0),
+        margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+        padding: EdgeInsets.all(8.0),
         height: 140.0,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+         color: Color(0xFF000000),
           boxShadow: [
             BoxShadow(
-              color: Colors.black12,
-              offset: Offset(0, 1),
-              blurRadius: 6.0,
+              color: Colors.black,
+              offset: Offset(1, 0),
+              blurRadius: 1.0,
             ),
           ],
         ),
         child: Column(
           children: <Widget>[
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(5),
                           child: Image(
                 width: 150.0,
                 image: NetworkImage(video.thumbnailUrl),
               ),
             ),
-            SizedBox(width: 8.0),
+            SizedBox(width: 8.0, height: 8),
             Expanded(
               child: Text(
                 video.title,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontSize: 12.0,
                 ),
               ),
@@ -171,11 +171,13 @@ class _LiveStreamState extends State<LiveStream> {
               ),
             )
           : Center(
-              child: CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(
-                  Theme.of(context).secondaryHeaderColor, // Red
-                ),
-              ),
+              // child: CircularProgressIndicator(
+              //   valueColor: AlwaysStoppedAnimation<Color>(
+              //     Theme.of(context).primaryColor, // Red
+              //   ),
+              // ),
+
+              child: CircularProgressIndicator(),
             ),
     );
     
