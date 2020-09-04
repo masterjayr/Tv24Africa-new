@@ -15,7 +15,7 @@ class ClipVideosMan extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Videos',
+              'V',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20,
