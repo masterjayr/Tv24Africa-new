@@ -40,11 +40,14 @@ dependencies:
   connectivity: ^0.4.9
   # url_launcher: 5.1.6
   url_launcher: ^5.5.0
-  provider: ^2.0.1
+  global_network: ^0.1.4
+  # provider: ^2.0.1
   video_player:
   get_it: ^1.0.3+2
   webview_flutter: ^0.3.22+1
-  flutter_spinkit: ^4.1.2+1  
+  flutter_spinkit: ^4.1.2+1 
+  # global_network: ^0.1.4 
+
 
 
   # The following adds the Cupertino Icons font to your application.
