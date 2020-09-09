@@ -15,6 +15,7 @@ class _BusinessCatState extends State<BusinessCat> {
       // backgroundColor: Colors.white,
       backgroundColor: Color(0xFF1a1a1a),
       appBar: AppBar(
+        backgroundColor: Colors.redAccent[700],
         title: Text("Business"),
         elevation: 0.0,
         centerTitle: true,
@@ -40,7 +41,7 @@ class _BusinessCatState extends State<BusinessCat> {
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(4),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -60,17 +61,17 @@ class _BusinessCatState extends State<BusinessCat> {
                                       fontSize: 23,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      parse((wppost['excerpt']['rendered'])
-                                              .toString())
-                                          .documentElement
-                                          .text,
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                      )),
-                                )
+                                // Padding(
+                                //   padding: const EdgeInsets.all(8.0),
+                                //   child: Text(
+                                //       parse((wppost['excerpt']['rendered'])
+                                //               .toString())
+                                //           .documentElement
+                                //           .text,
+                                //       style: TextStyle(
+                                //         fontSize: 15,
+                                //       )),
+                                // )
                               ],
                             ),
                           ),

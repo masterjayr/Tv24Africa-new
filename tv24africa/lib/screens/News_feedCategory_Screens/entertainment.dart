@@ -15,6 +15,7 @@ class _EntertainState extends State<Entertain> {
       // backgroundColor: Colors.white,
       backgroundColor: Color(0xFF1a1a1a),
       appBar: AppBar(
+        backgroundColor: Colors.redAccent[700],
         title: Text("Entertainment"),
         elevation: 0.0,
         centerTitle: true,
@@ -59,17 +60,17 @@ class _EntertainState extends State<Entertain> {
                                       fontSize: 23,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      parse((wppost['excerpt']['rendered'])
-                                              .toString())
-                                          .documentElement
-                                          .text,
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                      )),
-                                )
+                                // Padding(
+                                //   padding: const EdgeInsets.all(8.0),
+                                //   child: Text(
+                                //       parse((wppost['excerpt']['rendered'])
+                                //               .toString())
+                                //           .documentElement
+                                //           .text,
+                                //       style: TextStyle(
+                                //         fontSize: 15,
+                                //       )),
+                                // )
                               ],
                             ),
                           ),

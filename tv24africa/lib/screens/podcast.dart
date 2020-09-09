@@ -36,7 +36,7 @@ class _PodCastState extends State<PodCast> {
       home: Scaffold(
          backgroundColor: Color(0xFF1a1a1a),
         appBar: AppBar(
-           backgroundColor: Color(0xFF1a1a1a),
+           backgroundColor: Colors.redAccent[700],
           leading: new IconButton(
               icon: new Icon(
                 Icons.arrow_back,
@@ -64,7 +64,7 @@ class _PodCastState extends State<PodCast> {
               child: IconButton(
                 icon: Icon(
                   Icons.home,
-                  color: Colors.redAccent[700],
+                  color: Colors.black,
                   size: 29,
                 ),
                 onPressed: () {

@@ -14,6 +14,7 @@ class _AboutState extends State<About> {
     return Scaffold(
       backgroundColor: Color(0xFF1a1a1a),
       appBar: AppBar(
+        backgroundColor: Colors.redAccent[700],
         title: Text('About'),
           actions: <Widget>[
           Padding(

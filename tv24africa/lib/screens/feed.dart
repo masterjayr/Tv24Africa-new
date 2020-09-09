@@ -47,16 +47,16 @@ class _NewsState extends State<News> {
                         child: Card(
                           // color: Color(0xFF202020),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(4),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(4.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 // Image.network(imageUrl),
                                 Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: const EdgeInsets.all(4.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8),
                                     child: FadeInImage.assetNetwork(
@@ -80,17 +80,17 @@ class _NewsState extends State<News> {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      parse((wppost['excerpt']['rendered'])
-                                              .toString())
-                                          .documentElement
-                                          .text,
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                      )),
-                                )
+                                // Padding(
+                                //   padding: const EdgeInsets.all(8.0),
+                                //   child: Text(
+                                //       parse((wppost['excerpt']['rendered'])
+                                //               .toString())
+                                //           .documentElement
+                                //           .text,
+                                //       style: TextStyle(
+                                //         fontSize: 15,
+                                //       )),
+                                // )
                               ],
                             ),
                           ),

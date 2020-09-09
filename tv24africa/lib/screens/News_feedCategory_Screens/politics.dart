@@ -15,6 +15,7 @@ class _PoliticsState extends State<Politics> {
       // backgroundColor: Colors.white,
       backgroundColor: Color(0xFF1a1a1a),
       appBar: AppBar(
+        backgroundColor: Colors.redAccent[700],
         title: Text("Politics"),
         elevation: 0.0,
         centerTitle: true,
@@ -30,7 +31,7 @@ class _PoliticsState extends State<Politics> {
                     Map wppost = snapshot.data[index];
                     var imageUrl = wppost["featured_image_src"];
                     return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: InkWell(
                         onTap: () {
                           Navigator.push(
@@ -40,7 +41,7 @@ class _PoliticsState extends State<Politics> {
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(5),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -57,19 +58,20 @@ class _PoliticsState extends State<Politics> {
                                   wppost['title']['rendered'],
                                   style: TextStyle(
                                       fontSize: 23,
+                                      color: Colors.redAccent[700],
                                       fontWeight: FontWeight.bold),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      parse((wppost['excerpt']['rendered'])
-                                              .toString())
-                                          .documentElement
-                                          .text,
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                      )),
-                                )
+                                // Padding(
+                                //   padding: const EdgeInsets.all(8.0),
+                                //   child: Text(
+                                //       parse((wppost['excerpt']['rendered'])
+                                //               .toString())
+                                //           .documentElement
+                                //           .text,
+                                //       style: TextStyle(
+                                //         fontSize: 15,
+                                //       )),
+                                // )
                               ],
                             ),
                           ),

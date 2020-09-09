@@ -12,7 +12,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String liveVideoUrl = 'https://youtu.be/-c8LoR84Xjs';
+  // String liveVideoUrl = 'https://youtu.be/-c8LoR84Xjs';
+  String liveVideoUrl= 'https://youtu.be/oiK02WjJ1VQ';
   final String phoneNumber1 = "08139027050";
 
   Channel _channel;
@@ -52,12 +53,12 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-        padding: EdgeInsets.all(10.0),
+        margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+        padding: EdgeInsets.all(8.0),
         height: 150.0,
         decoration: BoxDecoration(
-          borderRadius: BorderRadiusDirectional.circular(8),
-          color: Color(0xFF000000),
+          borderRadius: BorderRadiusDirectional.circular(4),
+          color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.black45,
@@ -69,19 +70,19 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             ClipRRect(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(4),
               child: Image(
                 image: NetworkImage(video.thumbnailUrl),
                 fit: BoxFit.contain,
               ),
             ),
-            SizedBox(width: 15.0, height: 8),
+            SizedBox(width: 10.0, height: 4),
             Expanded(
               child: Text(
                 video.title,
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12.0,
+                  color: Colors.black,
+                  fontSize: 13.0,
                   fontWeight: FontWeight.w500,
                 ),
               ),

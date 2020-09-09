@@ -93,11 +93,11 @@ class _LiveStreamState extends State<LiveStream> {
       child: Container(
         
         margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(4.0),
         height: 140.0,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-         color: Color(0xFF000000),
+          borderRadius: BorderRadius.circular(6),
+         color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.black,
@@ -109,19 +109,19 @@ class _LiveStreamState extends State<LiveStream> {
         child: Column(
           children: <Widget>[
             ClipRRect(
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(4),
                           child: Image(
-                width: 150.0,
+                width: 200.0,
                 image: NetworkImage(video.thumbnailUrl),
               ),
             ),
-            SizedBox(width: 8.0, height: 8),
+            SizedBox(width: 8.0, height: 4),
             Expanded(
               child: Text(
                 video.title,
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12.0,
+                  color: Colors.black,
+                  fontSize: 15.0,
                 ),
               ),
             ),

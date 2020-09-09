@@ -50,25 +50,27 @@ class _MyAppState extends State<MyApp> {
                   child: Scaffold(
             backgroundColor: Color(0xFF262626),
             appBar: AppBar(
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text('Tv24',
-                      style: GoogleFonts.mcLaren(
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      )),
-                  Text('Africa',
-                      style: GoogleFonts.mcLaren(
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      )),
-                ],
-              ),
+              backgroundColor: Colors.redAccent[700],
+              // title: Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: <Widget>[
+              //     Text('Tv24',
+              //         style: GoogleFonts.mcLaren(
+              //           textStyle: TextStyle(
+              //             color: Colors.white,
+              //             fontSize: 20,
+              //           ),
+              //         )),
+              //     Text('Africa',
+              //         style: GoogleFonts.mcLaren(
+              //           textStyle: TextStyle(
+              //             color: Colors.white,
+              //             fontSize: 20,
+              //           ),
+              //         )),
+              //   ],
+              // ),
+              title: Image.asset('assets/images/white.png', height: 60, width: 60,),
               centerTitle: true,
               elevation: 0.0,
             ),

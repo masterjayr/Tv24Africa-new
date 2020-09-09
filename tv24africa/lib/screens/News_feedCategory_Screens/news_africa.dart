@@ -15,6 +15,7 @@ class _AfricaState extends State<Africa> {
       // backgroundColor: Colors.white,
       backgroundColor: Color(0xFF1a1a1a),
       appBar: AppBar(
+        backgroundColor: Colors.redAccent[700],
         title: Text("News Africa"),
         elevation: 0.0,
         centerTitle: true,
@@ -40,7 +41,7 @@ class _AfricaState extends State<Africa> {
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(5),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -59,17 +60,17 @@ class _AfricaState extends State<Africa> {
                                       fontSize: 23,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      parse((wppost['excerpt']['rendered'])
-                                              .toString())
-                                          .documentElement
-                                          .text,
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                      )),
-                                )
+                                // Padding(
+                                //   padding: const EdgeInsets.all(8.0),
+                                //   child: Text(
+                                //       parse((wppost['excerpt']['rendered'])
+                                //               .toString())
+                                //           .documentElement
+                                //           .text,
+                                //       style: TextStyle(
+                                //         fontSize: 15,
+                                //       )),
+                                // )
                               ],
                             ),
                           ),
