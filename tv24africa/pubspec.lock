@@ -50,13 +50,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.3"
-  chewie:
-    dependency: "direct main"
-    description:
-      name: chewie
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.10"
   clock:
     dependency: transitive
     description:
@@ -71,13 +64,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.14.13"
-  color:
-    dependency: "direct main"
-    description:
-      name: color
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.1"
   connectivity:
     dependency: "direct main"
     description:
@@ -160,13 +146,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.1"
-  flutter_colorpicker:
-    dependency: "direct main"
-    description:
-      name: flutter_colorpicker
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.4"
   flutter_html:
     dependency: "direct main"
     description:
@@ -188,27 +167,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.5"
-  flutter_material_color_picker:
-    dependency: "direct main"
-    description:
-      name: flutter_material_color_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.5"
-  flutter_plugin_android_lifecycle:
-    dependency: transitive
-    description:
-      name: flutter_plugin_android_lifecycle
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.8"
-  flutter_spinkit:
-    dependency: "direct main"
-    description:
-      name: flutter_spinkit
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.1.2+1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -226,20 +184,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.4"
-  get_it:
-    dependency: "direct main"
-    description:
-      name: get_it
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
-  global_network:
-    dependency: "direct main"
-    description:
-      name: global_network
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.4"
   google_fonts:
     dependency: "direct main"
     description:
@@ -247,13 +191,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  gradient_app_bar:
-    dependency: "direct main"
-    description:
-      name: gradient_app_bar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.3"
   html:
     dependency: "direct main"
     description:
@@ -282,20 +219,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.14"
-  image_picker:
-    dependency: "direct main"
-    description:
-      name: image_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.6.7+7"
-  image_picker_platform_interface:
-    dependency: transitive
-    description:
-      name: image_picker_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
   intl:
     dependency: transitive
     description:
@@ -324,20 +247,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.7"
-  nested:
-    dependency: transitive
-    description:
-      name: nested
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.4"
-  open_iconic_flutter:
-    dependency: transitive
-    description:
-      name: open_iconic_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.0"
   path:
     dependency: transitive
     description:
@@ -415,13 +324,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.13"
-  provider:
-    dependency: transitive
-    description:
-      name: provider
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.3.2+1"
   pub_semver:
     dependency: transitive
     description:
@@ -588,13 +490,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.3+2"
-  wakelock:
-    dependency: transitive
-    description:
-      name: wakelock
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.4+2"
   webview_flutter:
     dependency: "direct main"
     description:

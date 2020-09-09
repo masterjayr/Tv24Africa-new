@@ -4,8 +4,6 @@ import 'package:tv24africa/screens/feed.dart';
 import 'package:tv24africa/screens/home.dart';
 import 'package:tv24africa/screens/live_streamHome.dart';
 import './screens/home_drawer.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:global_network/global_network.dart';
 
 void main() => runApp(new MyApp());
 
@@ -34,9 +32,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return   StreamProvider<ConnectivityStatus>(
-      create: (BuildContext context) => ConnectivityService().connectionStatusController.stream,
-          child: MaterialApp(
+    return  MaterialApp(
         title: 'Tv24 Africa',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -44,10 +40,7 @@ class _MyAppState extends State<MyApp> {
           secondaryHeaderColor: Color(0xFF262626),
           canvasColor: Color(0xFF262626),
         ),
-        home: GlobalNetwork(
-          type: Displaytype.alertBox,
-          errorScreen: MyApp(),
-                  child: Scaffold(
+        home: Scaffold(
             backgroundColor: Color(0xFF262626),
             appBar: AppBar(
               backgroundColor: Colors.redAccent[700],
@@ -90,27 +83,25 @@ class _MyAppState extends State<MyApp> {
               },
               items: [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
-                  title: Text('Home'),
+        icon: Icon(Icons.home),
+        title: Text('Home'),
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.video_library),
-                  title: Text('Videos'),
+        icon: Icon(Icons.video_library),
+        title: Text('Videos'),
                 ),
                 //
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.library_books, size: 25),
-                  title: Text('NewsPaper'),
+        icon: Icon(Icons.library_books, size: 25),
+        title: Text('NewsPaper'),
                 ),
                  BottomNavigationBarItem(
-                  icon: Icon(Icons.unfold_more),
-                  title: Text('Explore'),
+        icon: Icon(Icons.unfold_more),
+        title: Text('Explore'),
                 ),
               ],
             ),
           ),
-        ),
-      ),
     );
   }
 }
